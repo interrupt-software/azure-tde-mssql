@@ -1,11 +1,15 @@
-sudo yum update
-sudo yum install unzip
-sudo yum install snapd
+#!/bin/bash -l
+
+set -euxo pipefail
+
+sudo apt update && sudo apt upgrade
+sudo apt-get install unzip
+sudo apt-get install snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install jq
 
-export VAULT_URL="https://releases.hashicorp.com/vault" VAULT_VERSION="1.8.4+ent"
+export VAULT_URL="https://releases.hashicorp.com/vault" VAULT_VERSION="1.10.4+ent"
 
 curl \
     --silent \
@@ -116,3 +120,30 @@ sudo systemctl daemon-reload
 sudo systemctl enable vault
 sudo systemctl start vault
 sudo systemctl status vault
+
+# Sleep 10 seconds to avoid race condition with Vault startup
+sleep 10
+
+# Unseal Vault 
+vault operator init \
+  -format=json \
+  -key-shares=1 \
+  -key-threshold=1 \
+  > vault-unseal.json
+
+export VAULT_UNSEAL=$(cat /root/vault-unseal.json | jq -r '.unseal_keys_b64[0]')
+export VAULT_TOKEN=$(cat /root/vault-unseal.json | jq -r '.root_token')
+
+echo "export VAULT_TOKEN=$VAULT_TOKEN" >> /root/.bashrc
+
+vault operator unseal $VAULT_UNSEAL
+
+# Sleep 10 seconds to avoid race condition with Vault unseal due to Raft writing to disk
+sleep 10
+
+vault login $VAULT_TOKEN
+
+cd /root
+vault secrets enable -path=vault-admin -version=2 kv
+vault kv put vault-admin/vault-unseal @vault-unseal.json  
+

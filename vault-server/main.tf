@@ -21,14 +21,14 @@ resource "azurerm_linux_virtual_machine" "azvm" {
   name                = "${var.prefix}-vm"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
-  size                = "Standard_F2"
-  admin_username      = "admin"
+  size                = "Standard_B1s"
+  admin_username      = "vadmin"
   network_interface_ids = [
     azurerm_network_interface.azvm.id,
   ]
 
   admin_ssh_key {
-    username   = "admin"
+    username   = "vadmin"
     public_key = file("./.ssh/id_rsa.pub")
   }
 
@@ -40,8 +40,8 @@ resource "azurerm_linux_virtual_machine" "azvm" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "20.04-LTS"
+    offer     = "0001-com-ubuntu-server-focal"
+    sku       = "20_04-lts-gen2"
     version   = "latest"
   }
 }
@@ -81,8 +81,8 @@ resource "azurerm_network_security_rule" "ssh_port" {
 }
 
 resource "azurerm_network_security_rule" "vault_port" {
-  name                        = "SSH"
-  priority                    = 100
+  name                        = "Vault API"
+  priority                    = 101
   direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
@@ -95,13 +95,17 @@ resource "azurerm_network_security_rule" "vault_port" {
 }
 
 resource "null_resource" "deploy-vault-instance" {
+  depends_on = [
+    azurerm_linux_virtual_machine.azvm
+  ]
+
   provisioner "file" {
     source      = "deploy-vault-instance.tpl"
     destination = "/tmp/deploy-vault-instance.bash"
 
     connection {
       type        = "ssh"
-      user        = "admin"
+      user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
       host        = azurerm_public_ip.azvm.ip_address
     }
@@ -109,11 +113,11 @@ resource "null_resource" "deploy-vault-instance" {
 
   provisioner "remote-exec" {
     inline = [
-
+        "bash /tmp/deploy-vault-instance.bash"
     ]
     connection {
       type        = "ssh"
-      user        = "admin"
+      user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
       host        = azurerm_public_ip.azvm.ip_address
     }
