@@ -2,9 +2,9 @@
 
 set -euxo pipefail
 
-sudo apt update && sudo apt upgrade
-sudo apt-get install unzip
-sudo apt-get install snapd
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install unzip -y
+sudo apt-get install snapd -y
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install jq

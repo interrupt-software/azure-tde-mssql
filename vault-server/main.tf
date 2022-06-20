@@ -100,8 +100,32 @@ resource "null_resource" "deploy-vault-instance" {
   ]
 
   provisioner "file" {
-    source      = "deploy-vault-instance.tpl"
+    source      = "./bash/deploy-vault-instance.bash"
     destination = "/tmp/deploy-vault-instance.bash"
+
+    connection {
+      type        = "ssh"
+      user        = "vadmin"
+      private_key = file("./.ssh/id_rsa")
+      host        = azurerm_public_ip.azvm.ip_address
+    }
+  }
+
+  provisioner "file" {
+    source      = "./bash/initialize-vault-instance.bash"
+    destination = "/tmp/initialize-vault-instance.bash"
+
+    connection {
+      type        = "ssh"
+      user        = "vadmin"
+      private_key = file("./.ssh/id_rsa")
+      host        = azurerm_public_ip.azvm.ip_address
+    }
+  }
+
+  provisioner "file" {
+    source      = "./bash/vault.hclic"
+    destination = "/tmp/vault.hclic"
 
     connection {
       type        = "ssh"
@@ -113,7 +137,9 @@ resource "null_resource" "deploy-vault-instance" {
 
   provisioner "remote-exec" {
     inline = [
-        "bash /tmp/deploy-vault-instance.bash"
+        "bash /tmp/deploy-vault-instance.bash",
+        "mv /tmp/vault.hclic /etc/vault.d/vault.hclic",
+        "bash /tmp/initialize-vault-instance.bash"
     ]
     connection {
       type        = "ssh"
