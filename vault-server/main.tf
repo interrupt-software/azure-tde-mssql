@@ -124,7 +124,7 @@ resource "null_resource" "deploy-vault-instance" {
   }
 
   provisioner "file" {
-    source      = "./scripts/vault.hclic"
+    source      = "/var/vault-license.hclic"
     destination = "/tmp/vault.hclic"
 
     connection {
