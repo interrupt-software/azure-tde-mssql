@@ -100,7 +100,7 @@ resource "null_resource" "deploy-vault-instance" {
   ]
 
   provisioner "file" {
-    source      = "./bash/deploy-vault-instance.bash"
+    source      = "./scripts/deploy-vault-instance.bash"
     destination = "/tmp/deploy-vault-instance.bash"
 
     connection {
@@ -112,7 +112,7 @@ resource "null_resource" "deploy-vault-instance" {
   }
 
   provisioner "file" {
-    source      = "./bash/initialize-vault-instance.bash"
+    source      = "./scripts/initialize-vault-instance.bash"
     destination = "/tmp/initialize-vault-instance.bash"
 
     connection {
@@ -124,7 +124,7 @@ resource "null_resource" "deploy-vault-instance" {
   }
 
   provisioner "file" {
-    source      = "./bash/vault.hclic"
+    source      = "./scripts/vault.hclic"
     destination = "/tmp/vault.hclic"
 
     connection {
