@@ -4,5 +4,8 @@ $EKM_PROVIDER_MSI_FILE="C:\Users\mssql-tde-dev\Downloads\vault-mssql-ekm-provide
 $EKM_PROVIDER_LOG_FILE="C:\Users\mssql-tde-dev\Downloads\vault-mssql-ekm-provider.log"
 
 Invoke-WebRequest -URI $EKM_PROVIDER_SOURCE -Outfile $EKM_PROVIDER_ZIP_FILE
+
 Expand-Archive $EKM_PROVIDER_ZIP_FILE -DestinationPath "C:\Users\mssql-tde-dev\Downloads\"
+
 Start-Process -FilePath "msiexec" -ArgumentList "/i $EKM_PROVIDER_MSI_FILE /quiet -l $EKM_PROVIDER_LOG_FILE"
+
