@@ -107,7 +107,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.linux.ip_address
+      host        = azurerm_linux_virtual_machine.linux.public_ip_address
     }
   }
 
@@ -119,7 +119,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.linux.ip_address
+      host        = azurerm_linux_virtual_machine.linux.public_ip_address
     }
   }
 
@@ -131,7 +131,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.linux.ip_address
+      host        = azurerm_linux_virtual_machine.linux.public_ip_address
     }
   }
 
@@ -145,11 +145,15 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.linux.ip_address
+      host        = azurerm_linux_virtual_machine.linux.public_ip_address
     }
+  }
+
+  triggers = {
+    always_run = timestamp()
   }
 }
 
 output "azurerm_public_ip" {
-  value = azurerm_public_ip.linux.ip_address
+  value = azurerm_linux_virtual_machine.linux.public_ip_address
 }
