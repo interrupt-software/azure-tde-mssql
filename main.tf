@@ -36,3 +36,12 @@ output "vault_server_http_url" {
 output "vault_server_ssh_cmd" {
   value = "ssh -i .ssh/id_rsa vadmin@${module.vault-server.azurerm_public_ip}"
 }
+
+output "password" {
+    value = module.mssql-server.password
+  sensitive   = true
+}
+
+output "start_rdp_session" {
+    value = module.mssql-server.start_rdp_session
+}
