@@ -24,7 +24,7 @@ resource "random_password" "password" {
 
 resource "azurerm_windows_virtual_machine" "windows" {
   name                = "${var.prefix}-windows-mssql"
-  resource_group_name = azvar.resource_group_name
+  resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   size                = "Standard_B2s"
   admin_username      = "mssql-tde-dev"

@@ -1,14 +1,14 @@
 data "azurerm_public_ip" "public_ip_data" {
-  name                = azurerm_public_ip.main.name
-  resource_group_name = azurerm_resource_group.main.name
-  depends_on          = [azurerm_windows_virtual_machine.main]
+  name                = azurerm_public_ip.windows.name
+  resource_group_name = var.resource_group_name
+  depends_on          = [azurerm_windows_virtual_machine.windows]
 }
 
 resource "local_file" "rdp" {
   filename = "mssql-tde-dev.rdp"
   content  = <<EOF
 full address:s:${data.azurerm_public_ip.public_ip_data.ip_address}:${azurerm_network_security_rule.rdp.destination_port_range}
-username:s:${azurerm_windows_virtual_machine.main.admin_username}
+username:s:${azurerm_windows_virtual_machine.windows.admin_username}
 administrative session:i:1
 EOF
 }
