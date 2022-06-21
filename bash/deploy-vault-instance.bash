@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-set -euxo pipefail
+#set -euxo pipefail
 
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install unzip -y

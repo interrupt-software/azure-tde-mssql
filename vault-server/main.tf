@@ -138,7 +138,7 @@ resource "null_resource" "deploy-vault-instance" {
   provisioner "remote-exec" {
     inline = [
         "bash /tmp/deploy-vault-instance.bash",
-        "mv /tmp/vault.hclic /etc/vault.d/vault.hclic",
+        "sudo mv /tmp/vault.hclic /etc/vault.d/vault.hclic",
         "bash /tmp/initialize-vault-instance.bash"
     ]
     connection {
