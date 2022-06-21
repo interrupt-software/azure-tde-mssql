@@ -20,6 +20,15 @@ module "vault-server" {
   network_security_group_name = module.azure-env.network_security_group_name
 }
 
+module "mssql-server" {
+  source                      = "./mssql-server"
+  prefix                      = "mssql-server"
+  resource_group_name         = module.azure-env.azurerm_resource_group_name
+  resource_group_location     = module.azure-env.azurerm_resource_group_location
+  resource_group_subnet_id    = module.azure-env.azurerm_resource_group_subnet_id
+  network_security_group_name = module.azure-env.network_security_group_name
+}
+
 output "vault_server_http_url" {
   value = "http://${module.vault-server.azurerm_public_ip}:8200"
 }
