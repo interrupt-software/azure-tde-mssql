@@ -118,3 +118,5 @@ sudo ln -s /usr/lib/systemd/system/vault.service /etc/systemd/system/vault.servi
 sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 sudo systemctl enable vault
+
+exit

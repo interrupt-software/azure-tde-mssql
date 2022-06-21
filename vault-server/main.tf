@@ -150,3 +150,6 @@ resource "null_resource" "deploy-vault-instance" {
   }
 }
 
+output "azurerm_public_ip" {
+  value = azurerm_public_ip.azvm.ip_address
+}
