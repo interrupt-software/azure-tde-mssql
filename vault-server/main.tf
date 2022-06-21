@@ -18,7 +18,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_linux_virtual_machine" "linux" {
-  name                = "${var.prefix}-linux-vault"
+  name                = "${var.prefix}-linux"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   size                = "Standard_B1s"

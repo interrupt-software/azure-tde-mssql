@@ -23,7 +23,7 @@ resource "random_password" "password" {
 }
 
 resource "azurerm_windows_virtual_machine" "windows" {
-  name                = "${var.prefix}-windows-mssql"
+  name                = "${var.prefix}-mssql"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   size                = "Standard_B2s"
@@ -68,7 +68,7 @@ resource "azurerm_public_ip" "windows" {
 
 resource "azurerm_network_security_rule" "rdp" {
   name                        = "Allow RDP"
-  priority                   = 100
+  priority                   = 200
   direction                  = "Inbound"
   access                     = "Allow"
   protocol                   = "Tcp"
@@ -82,7 +82,7 @@ resource "azurerm_network_security_rule" "rdp" {
 
 resource "azurerm_network_security_rule" "ping" {
   name                        = "Allow ICMP pings"
-  priority                   = 102
+  priority                   = 202
   direction                  = "Inbound"
   access                     = "Allow"
   protocol                   = "Icmp"

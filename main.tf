@@ -13,7 +13,7 @@ module "azure-env" {
 
 module "vault-server" {
   source                      = "./vault-server"
-  prefix                      = "vault-server"
+  prefix                      = var.prefix
   resource_group_name         = module.azure-env.azurerm_resource_group_name
   resource_group_location     = module.azure-env.azurerm_resource_group_location
   resource_group_subnet_id    = module.azure-env.azurerm_resource_group_subnet_id
@@ -22,7 +22,7 @@ module "vault-server" {
 
 module "mssql-server" {
   source                      = "./mssql-server"
-  prefix                      = "mssql-server"
+  prefix                      = var.prefix
   resource_group_name         = module.azure-env.azurerm_resource_group_name
   resource_group_location     = module.azure-env.azurerm_resource_group_location
   resource_group_subnet_id    = module.azure-env.azurerm_resource_group_subnet_id
