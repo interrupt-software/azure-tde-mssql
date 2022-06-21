@@ -7,5 +7,5 @@ Invoke-WebRequest -URI $EKM_PROVIDER_SOURCE -Outfile $EKM_PROVIDER_ZIP_FILE
 
 Expand-Archive $EKM_PROVIDER_ZIP_FILE -DestinationPath "C:\Users\mssql-tde-dev\Downloads\"
 
-Start-Process -FilePath "msiexec" -ArgumentList "/i $EKM_PROVIDER_MSI_FILE /quiet -l $EKM_PROVIDER_LOG_FILE"
+Start-Process -FilePath "msiexec" -ArgumentList "/i $EKM_PROVIDER_MSI_FILE VAULT_API_URL=http://0.0.0.0:8200 VAULT_API_URL_IS_VALID=1 VAULT_INSTALL_FOLDER=`"C:\Program Files\HashiCorp\Transit Vault EKM Provider\`" /qb /l* $EKM_PROVIDER_LOG_FILE"
 
