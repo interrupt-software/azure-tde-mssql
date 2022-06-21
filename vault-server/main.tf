@@ -17,14 +17,14 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_linux_virtual_machine" "azvm" {
-  name                = "${var.prefix}-vm"
+resource "azurerm_linux_virtual_machine" "linux" {
+  name                = "${var.prefix}-linux-vault"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
   size                = "Standard_B1s"
   admin_username      = "vadmin"
   network_interface_ids = [
-    azurerm_network_interface.azvm.id,
+    azurerm_network_interface.linux.id,
   ]
 
   admin_ssh_key {
@@ -46,24 +46,24 @@ resource "azurerm_linux_virtual_machine" "azvm" {
   }
 }
 
-resource "azurerm_network_interface" "azvm" {
-  name                = "${var.prefix}-nic"
-  resource_group_name = var.resource_group_name
+resource "azurerm_network_interface" "linux" {
+  name                = "${var.prefix}-linux-nic"
   location            = var.resource_group_location
+  resource_group_name = var.resource_group_name
 
   ip_configuration {
     name                          = "internal"
     subnet_id                     = var.resource_group_subnet_id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.azvm.id
+    public_ip_address_id          = azurerm_public_ip.linux.id
   }
 }
 
-resource "azurerm_public_ip" "azvm" {
-  name                = "${var.prefix}-pip"
+resource "azurerm_public_ip" "linux" {
+  name                = "${var.prefix}-linux-pip"
   resource_group_name = var.resource_group_name
   location            = var.resource_group_location
-  allocation_method   = "Static"
+  allocation_method   = "Dynamic"
 }
 
 resource "azurerm_network_security_rule" "ssh_port" {
@@ -96,7 +96,7 @@ resource "azurerm_network_security_rule" "vault_port" {
 
 resource "null_resource" "deploy-vault-instance" {
   depends_on = [
-    azurerm_linux_virtual_machine.azvm
+    azurerm_linux_virtual_machine.linux
   ]
 
   provisioner "file" {
@@ -107,7 +107,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.azvm.ip_address
+      host        = azurerm_public_ip.linux.ip_address
     }
   }
 
@@ -119,7 +119,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.azvm.ip_address
+      host        = azurerm_public_ip.linux.ip_address
     }
   }
 
@@ -131,7 +131,7 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.azvm.ip_address
+      host        = azurerm_public_ip.linux.ip_address
     }
   }
 
@@ -145,11 +145,11 @@ resource "null_resource" "deploy-vault-instance" {
       type        = "ssh"
       user        = "vadmin"
       private_key = file("./.ssh/id_rsa")
-      host        = azurerm_public_ip.azvm.ip_address
+      host        = azurerm_public_ip.linux.ip_address
     }
   }
 }
 
 output "azurerm_public_ip" {
-  value = azurerm_public_ip.azvm.ip_address
+  value = azurerm_public_ip.linux.ip_address
 }

@@ -3,7 +3,7 @@
 set -euxo pipefail
 
 sudo systemctl start vault
-sudo systemctl status vault --no-pager -full
+sudo systemctl status vault --no-pager 
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
@@ -31,6 +31,8 @@ vault login $VAULT_TOKEN
 
 cd /home/vadmin
 vault secrets enable -path=vault-admin -version=2 kv
+# Sleep 10 seconds to avoid race condition with Vault unseal due to Raft writing to disk
+sleep 10
 vault kv put vault-admin/vault-unseal @vault-unseal.json
 
 cat << EOF > admins.hcl
