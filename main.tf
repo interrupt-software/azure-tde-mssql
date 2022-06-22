@@ -29,6 +29,10 @@ module "mssql-server" {
   network_security_group_name = module.azure-env.network_security_group_name
 }
 
+output "vault_server_public_ip" {
+  value = module.vault-server.azurerm_public_ip
+}
+
 output "vault_server_http_url" {
   value = "http://${module.vault-server.azurerm_public_ip}:8200"
 }
@@ -38,10 +42,10 @@ output "vault_server_ssh_cmd" {
 }
 
 output "password" {
-    value = module.mssql-server.password
-  sensitive   = true
+  value     = module.mssql-server.password
+  sensitive = true
 }
 
 output "start_rdp_session" {
-    value = module.mssql-server.start_rdp_session
+  value = module.mssql-server.start_rdp_session
 }
