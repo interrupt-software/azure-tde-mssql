@@ -1,79 +1,16 @@
--- Enable advanced options
-USE master;
-GO
+$EKM_WORKING_DIR='C:\Users\mssql-tde-dev'
 
-EXEC sp_configure 'show advanced options', 1;
-GO
+if (!(Test-Path -Path $EKM_WORKING_DIR)) {
+  New-Item -ItemType Directory -Path $EKM_WORKING_DIR
+}
 
-RECONFIGURE;
-GO
+$PS1Script_URL="https://raw.githubusercontent.com/interrupt-software/azure-tde-mssql/main/scripts/ConfigureSQLServer.sql"
+$PS1Script_Local="$EKM_WORKING_DIR\ConfigureSQLServer.sql"
 
--- Enable EKM provider
-EXEC sp_configure 'EKM provider enabled', 1;
-GO
+Invoke-WebRequest -URI $PS1Script_URL -Outfile $PS1Script_Local
 
-RECONFIGURE;
-GO
+((Get-Content -path $PS1Script_Local -Raw) -replace 'approle-role-id','APPROLE_ROLE_ID') | Set-Content -Path $PS1Script_Local
 
-CREATE CRYPTOGRAPHIC PROVIDER TransitVaultProvider
-FROM FILE = 'C:\Program Files\HashiCorp\Transit Vault EKM Provider\TransitVaultEKM.dll'
-GO
+((Get-Content -path $PS1Script_Local -Raw) -replace 'approle-secret-id','APPROLE_SECRET_ID') | Set-Content -Path $PS1Script_Local
 
--- Create credentials for an admin
-
-CREATE CREDENTIAL TransitVaultCredentials
-    WITH IDENTITY = 'approle-role-id',
-    SECRET = 'approle-secret-id'
-FOR CRYPTOGRAPHIC PROVIDER TransitVaultProvider;
-GO
-ALTER LOGIN "example-mssql\mssql-tde-dev" ADD CREDENTIAL TransitVaultCredentials;
-
--- create an asymmetric key using the transit key
-
-CREATE ASYMMETRIC KEY TransitVaultAsymmetric
-FROM PROVIDER TransitVaultProvider
-WITH
-CREATION_DISPOSITION = OPEN_EXISTING,
-PROVIDER_KEY_NAME = 'ekm-encryption-key';
-
--- Create another login from the new asymmetric key
-
-CREATE CREDENTIAL TransitVaultTDECredentials
-    WITH IDENTITY = 'approle-role-id',
-    SECRET = 'approle-secret-id'
-FOR CRYPTOGRAPHIC PROVIDER TransitVaultProvider;
-GO
-
-CREATE LOGIN TransitVaultTDELogin
-FROM ASYMMETRIC KEY TransitVaultAsymmetric;
-GO 
-
-ALTER LOGIN TransitVaultTDELogin
-ADD CREDENTIAL TransitVaultTDECredentials;
-GO
-
--- enable TDE and protect the database encryption key with the asymmetric key
-
-CREATE DATABASE TestTDE
-GO
-
-USE TestTDE;
-GO
-
-CREATE DATABASE ENCRYPTION KEY
-WITH ALGORITHM = AES_256
-ENCRYPTION BY SERVER ASYMMETRIC KEY TransitVaultAsymmetric;
-GO
-
-ALTER DATABASE TestTDE
-SET ENCRYPTION ON;
-GO
-
--- Check the status of database encryption
-
-SELECT * FROM sys.dm_database_encryption_keys;
-
-SELECT (SELECT name FROM sys.databases WHERE database_id = k.database_id) as name,
-    encryption_state, key_algorithm, key_length,
-    encryptor_type, encryption_state_desc, encryption_scan_state_desc FROM sys.dm_database_encryption_keys k;
-
+Invoke-Sqlcmd -ServerInstance example-mssql -InputFile $PS1Script_Local -Verbose
