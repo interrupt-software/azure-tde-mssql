@@ -27,3 +27,7 @@ terraform output -raw password | pbcopy
 open mssql-tde-dev.rdp
 EOF
 }
+
+output "azurerm_public_ip" {
+  value = data.azurerm_public_ip.public_ip_data.ip_address
+}

@@ -41,6 +41,10 @@ output "vault_server_ssh_cmd" {
   value = "ssh -i .ssh/id_rsa vadmin@${module.vault-server.azurerm_public_ip}"
 }
 
+output "mssql_server_public_ip" {
+  value = module.mssql-server.azurerm_public_ip
+}
+
 output "password" {
   value     = module.mssql-server.password
   sensitive = true
