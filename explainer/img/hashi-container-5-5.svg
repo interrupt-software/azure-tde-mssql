@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="400px" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hashi-container-5-5@1x</title>
+    <g id="hashi-container-5-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-opacity="0.5">
+        <g id="square" transform="translate(70.000000, 20.000000)" fill="#FFFFFF" stroke="#979797" stroke-width="4">
+            <rect id="Rectangle" x="-2" y="-2" width="364" height="364" rx="5"></rect>
+        </g>
+        <g id="square" transform="translate(255.000000, 82.000000)" fill="#FFFFFF" stroke="#979797" stroke-width="4">
+            <rect id="Rectangle" x="-2" y="-2" width="154" height="154" rx="5"></rect>
+        </g>
+        <g id="square" transform="translate(175.000000, 122.000000)" fill="#FFFFFF" stroke="#979797" stroke-width="4">
+            <rect id="Rectangle" x="-2" y="-2" width="154" height="154" rx="5"></rect>
+        </g>
+        <g id="square" transform="translate(95.000000, 167.000000)" fill="#FFFFFF" stroke="#979797" stroke-width="4">
+            <rect id="Rectangle" x="-2" y="-2" width="154" height="154" rx="5"></rect>
+        </g>
+    </g>
+</svg>

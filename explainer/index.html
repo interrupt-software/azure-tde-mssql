@@ -5,6 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
   <title>Framework</title>
 
   <script>
@@ -12,10 +20,10 @@
     const ar_height = 9;
 
     const paths = [
-      { id: 3, "class": "cell-span-4-2" },
-      { id: 4, "class": "cell-span-5-5" },
-      { id: 5, "class": "cell-span-3-3" },
-      { id: 10, "class": "cell-span-4-2" }
+      { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg" },
+      { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg" },
+      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom" }, "image": "hashi-container-4-2-1.svg" },
+      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom" }, "image": "hashi-container-4-2-2.svg" }
     ];
 
     function getDivSize(classdef) {
@@ -65,13 +73,35 @@
           var newDiv = document.createElement("div");
           newDiv.id = i * grid_columns + j;
           newDiv.classList.add("cell");
-          newDiv.innerHTML = newDiv.id;
+          // newDiv.innerHTML = newDiv.id;
           matrix.appendChild(newDiv);
         }
       }
 
       paths.forEach(path => {
-        document.getElementById(path.id.toString()).classList.add(path.class);
+        console.log(path.label.text)
+        const pathDiv = document.getElementById(path.id);
+        pathDiv.classList.add(path.class);
+
+        if (path.label.class == "cell-label-bottom") {
+          const imageDiv = document.createElement("div");
+          imageDiv.classList.add("svg-3-3")
+          fetchSVG("./img/" + path.image, imageDiv);
+          pathDiv.appendChild(imageDiv);
+        }
+
+        const labelDiv = document.createElement("div");
+        labelDiv.classList.add(path.label.class);
+        labelDiv.innerHTML = path.label.text;
+        pathDiv.appendChild(labelDiv);
+
+        if (path.label.class == "cell-label-top") {
+          const imageDiv = document.createElement("div");
+          imageDiv.classList.add("svg-3-3")
+          fetchSVG("./img/" + path.image, imageDiv);
+          pathDiv.appendChild(imageDiv);
+        }
+
       })
 
     };
@@ -90,6 +120,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: 'Roboto', sans-serif;
     }
 
     .matrix {
@@ -101,9 +132,7 @@
 
     .cell {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: lightblue;
+      flex-direction: column;
     }
 
     .cell-span-2-2 {
@@ -140,7 +169,24 @@
       border-radius: 10px;
       grid-column: span 5;
       grid-row: span 5;
-      background-color: lightblue;
+    }
+
+    .cell-label-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      height: var(--cell-height);
+    }
+
+    .cell-label-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      height: var(--cell-height);
     }
   </style>
 </head>
