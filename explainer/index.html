@@ -85,7 +85,6 @@
 
         if (path.label.class == "cell-label-bottom") {
           const imageDiv = document.createElement("div");
-          imageDiv.classList.add("svg-3-3")
           fetchSVG("./img/" + path.image, imageDiv);
           pathDiv.appendChild(imageDiv);
         }
@@ -97,7 +96,6 @@
 
         if (path.label.class == "cell-label-top") {
           const imageDiv = document.createElement("div");
-          imageDiv.classList.add("svg-3-3")
           fetchSVG("./img/" + path.image, imageDiv);
           pathDiv.appendChild(imageDiv);
         }
@@ -127,12 +125,13 @@
       display: inline-grid;
       grid-template-columns: repeat(var(--grid-columns), var(--cell-width));
       grid-template-rows: repeat(var(--grid-rows), var(--cell-height));
-      grid-gap: 5px;
+      /* grid-gap: 5px; */
     }
 
     .cell {
       display: flex;
       flex-direction: column;
+      /* background-color: lightblue; */
     }
 
     .cell-span-2-2 {
@@ -177,7 +176,8 @@
       align-items: center;
       text-transform: uppercase;
       font-weight: 900;
-      height: var(--cell-height);
+      height: calc(var(--cell-height)/2);
+      /* background-color: lightcoral; */
     }
 
     .cell-label-bottom {
@@ -186,7 +186,8 @@
       align-items: center;
       text-transform: uppercase;
       font-weight: 900;
-      height: var(--cell-height);
+      height: calc(var(--cell-height)/2);
+      /* background-color: lightseagreen; */
     }
   </style>
 </head>
