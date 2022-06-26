@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framework</title>
+
+  <script>
+    const ar_width = 16;
+    const ar_height = 9;
+
+    window.onload = function () {
+      var styles = getComputedStyle(document.documentElement);
+      var grid_columns = styles.getPropertyValue("--grid-columns");
+      var grid_rows = Math.round(grid_columns / (ar_width / ar_height) - 2);
+      document.documentElement.style.setProperty("--grid-rows", grid_rows);
+
+      var matrix_size = grid_columns * grid_rows;
+
+      // var cell_width = parseInt(
+      //   styles.getPropertyValue("--cell-width").replace(/px/, "")
+      // );
+      // var cell_height = Math.round(cell_width / (ar_width / ar_height));
+      // document.documentElement.style.setProperty(
+      //   "--cell-height",
+      //   cell_height + "px"
+      // );
+
+      const matrix = document.getElementById("matrix");
+
+      for (let i = 0; i < grid_rows; i++) {
+        for (let j = 0; j < grid_columns; j++) {
+          var newDiv = document.createElement("div");
+          newDiv.id = i * grid_columns + j;
+          newDiv.classList.add("cell");
+          newDiv.innerHTML = newDiv.id;
+          matrix.appendChild(newDiv);
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --grid-columns: 12;
+      --cell-width: 100px;
+      --cell-height: var(--cell-width);
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .matrix {
+      display: inline-grid;
+      grid-template-columns: repeat(var(--grid-columns), var(--cell-width));
+      grid-template-rows: repeat(var(--grid-rows), var(--cell-height));
+      grid-gap: 2px;
+    }
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightblue;
+    }
+
+    .cell-span-2 {
+      border-radius: 10px;
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .cell-span-3 {
+      border-radius: 10px;
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+
+    .cell-span-4 {
+      border-radius: 10px;
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
+    .cell-span-5 {
+      border-radius: 10px;
+      grid-column: span 5;
+      grid-row: span 5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="matrix" id="matrix"></div>
+</body>
+
+</html>
