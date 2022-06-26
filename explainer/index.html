@@ -24,6 +24,15 @@
       return w * h;
     }
 
+    const parser = new DOMParser();
+
+    async function fetchSVG(svg_name, div_target) {
+      const response = await fetch(svg_name);
+      const svgText = await response.text();
+      const svgDoc = parser.parseFromString(svgText, 'text/xml');
+      div_target.appendChild(svgDoc.documentElement);
+    }
+
     window.onload = function () {
 
       var styles = getComputedStyle(document.documentElement);
@@ -87,7 +96,7 @@
       display: inline-grid;
       grid-template-columns: repeat(var(--grid-columns), var(--cell-width));
       grid-template-rows: repeat(var(--grid-rows), var(--cell-height));
-      grid-gap: 2px;
+      grid-gap: 5px;
     }
 
     .cell {
@@ -100,6 +109,12 @@
     .cell-span-2-2 {
       border-radius: 10px;
       grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .cell-span-3-2 {
+      border-radius: 10px;
+      grid-column: span 3;
       grid-row: span 2;
     }
 
@@ -125,6 +140,7 @@
       border-radius: 10px;
       grid-column: span 5;
       grid-row: span 5;
+      background-color: lightblue;
     }
   </style>
 </head>
