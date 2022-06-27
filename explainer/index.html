@@ -20,10 +20,10 @@
     const ar_height = 9;
 
     const paths = [
-      { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg" },
-      { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg" },
-      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg" },
-      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg" }
+      { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg", "splash_delay": 9 },
+      { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg", "splash_delay": 3 },
+      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg", "splash_delay": 6 },
+      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg", "splash_delay": 12 }
     ];
 
     function getDivSize(classdef) {
@@ -102,6 +102,8 @@
           pathDiv.appendChild(imageDiv);
         }
 
+        pathDiv.style.setProperty("--splash-delay", path.splash_delay)
+
       })
 
     };
@@ -133,6 +135,9 @@
     .cell {
       display: flex;
       flex-direction: column;
+
+      animation: fadeInUp 3s ease forwards;
+      animation-delay: calc(var(--splash-delay) * 500ms);
       /* background-color: lightblue; */
     }
 
@@ -190,6 +195,20 @@
       font-weight: 900;
       height: calc(var(--cell-height)/2);
       /* background-color: lightseagreen; */
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30%);
+      }
+
+      30%,
+      50%,
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
