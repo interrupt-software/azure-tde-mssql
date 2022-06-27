@@ -1,4 +1,4 @@
-$EKM_WORKING_DIR='C:\Users\mssql-tde-dev'
+$EKM_WORKING_DIR="$env:USERPROFILE\Desktop"
 
 if (!(Test-Path -Path $EKM_WORKING_DIR)) {
   New-Item -ItemType Directory -Path $EKM_WORKING_DIR
@@ -13,4 +13,4 @@ Invoke-WebRequest -URI $PS1Script_URL -Outfile $PS1Script_Local
 
 ((Get-Content -path $PS1Script_Local -Raw) -replace 'approle-secret-id','APPROLE_SECRET_ID') | Set-Content -Path $PS1Script_Local
 
-Invoke-Sqlcmd -ServerInstance example-mssql -InputFile $PS1Script_Local -Verbose
+# Invoke-Sqlcmd -ServerInstance example-mssql -InputFile $PS1Script_Local -Verbose
