@@ -4,7 +4,7 @@ if (!(Test-Path -Path $EKM_WORKING_DIR)) {
   New-Item -ItemType Directory -Path $EKM_WORKING_DIR
 }
 
-$PS1Script_URL="https://raw.githubusercontent.com/interrupt-software/azure-tde-mssql/main/scripts/ConfigureSQLServer.sql"
+$PS1Script_URL="https://raw.githubusercontent.com/interrupt-software/azure-tde-mssql/main/terraform/scripts/ConfigureSQLServer.sql"
 $PS1Script_Local="$EKM_WORKING_DIR\ConfigureSQLServer.sql"
 
 Invoke-WebRequest -URI $PS1Script_URL -Outfile $PS1Script_Local
