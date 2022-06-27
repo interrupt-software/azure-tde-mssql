@@ -22,8 +22,8 @@
     const paths = [
       { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg" },
       { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg" },
-      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom" }, "image": "hashi-container-4-2-1.svg" },
-      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom" }, "image": "hashi-container-4-2-2.svg" }
+      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg" },
+      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg" }
     ];
 
     function getDivSize(classdef) {
@@ -79,7 +79,6 @@
       }
 
       paths.forEach(path => {
-        console.log(path.label.text)
         const pathDiv = document.getElementById(path.id);
         pathDiv.classList.add(path.class);
 
@@ -91,6 +90,9 @@
 
         const labelDiv = document.createElement("div");
         labelDiv.classList.add(path.label.class);
+        if (path.label.color) {
+          labelDiv.style.color = path.label.color;
+        }
         labelDiv.innerHTML = path.label.text;
         pathDiv.appendChild(labelDiv);
 
