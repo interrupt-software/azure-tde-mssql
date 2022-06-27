@@ -1,4 +1,4 @@
-$EKM_WORKING_DIR="$env:USERPROFILE\Desktop"
+$EKM_WORKING_DIR="C:\Users\mssql-tde-dev\Desktop"
 
 if (!(Test-Path -Path $EKM_WORKING_DIR)) {
   New-Item -ItemType Directory -Path $EKM_WORKING_DIR

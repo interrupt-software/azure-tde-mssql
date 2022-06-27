@@ -1,4 +1,4 @@
-$EKM_WORKING_DIR="$env:USERPROFILE\Desktop"
+$EKM_WORKING_DIR="C:\Users\mssql-tde-dev\Desktop"
 $EKM_PROVIDER_SOURCE_URL="https://releases.hashicorp.com/vault-mssql-ekm-provider/0.1.0+ent/vault-mssql-ekm-provider_0.1.0+ent_windows_amd64.zip"
 $EKM_PROVIDER_ZIP_FILE="$EKM_WORKING_DIR\vault-mssql-ekm-provider_0.1.0+ent_windows_amd64.zip"
 $EKM_PROVIDER_MSI_FILE="$EKM_WORKING_DIR\vault-mssql-ekm-provider.msi"
