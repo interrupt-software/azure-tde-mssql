@@ -205,8 +205,12 @@
       position: fixed;
       top: 10px;
       box-shadow: var(--shadow-2), 0 0 0 100vw rgb(0 0 0 / 0.5);
-
-      background: lightblue;
+      background: linear-gradient(to right bottom,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.3));
+      border-radius: 2rem;
+      z-index: 2;
+      backdrop-filter: blur(2rem);
       color: #222;
       border: 0;
       border-radius: 0.25rem;
