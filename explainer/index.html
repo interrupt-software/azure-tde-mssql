@@ -57,15 +57,6 @@
       var matrix_size = grid_columns * grid_rows;
       var matrix_true_size = matrix_size - offset;
 
-      // var cell_width = parseInt(
-      //   styles.getPropertyValue("--cell-width").replace(/px/, "")
-      // );
-      // var cell_height = Math.round(cell_width / (ar_width / ar_height));
-      // document.documentElement.style.setProperty(
-      //   "--cell-height",
-      //   cell_height + "px"
-      // );
-
       const matrix = document.getElementById("matrix");
 
       for (let i = 0; i < grid_rows; i++) {
@@ -221,6 +212,7 @@
       border-radius: 0.25rem;
       animation: fadeInUp 1000ms forwards, fade-in 500ms forwards;
       padding: 20px;
+      max-width: 600px;
     }
 
     .modal::backdrop {
@@ -280,26 +272,35 @@
 
   <div class="modal" id="modal1">
     <h2>Unauthorized User</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+    <p>Weak authentication and insecure storage of credentials leads to account impersonation.</p>
+    <p>If valid users hold privileges that exceed the requirements of their job function, these privileges may be abused
+      by an attacker who compromises their account.</p>
   </div>
 
   <div class="modal" id="modal2">
     <h2>Unauthorized Access</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+    <p>With account impersonation, bad actors can install Remote Access Tools (RAT) to target server-side data stores.
+    </p>
+    <p>After they target a potential victim's vulnerabilities, attackers can download and execute malware of
+      choice.</p>
   </div>
 
   <div class="modal" id="modal3">
     <h2>MS SQL Servers</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+    <p>Data stores that are unencrypted fail to protect confidentiality and integrity of sensitive data.</p>
+    <p>With access to a system, attacker can compromise an organisation stealing raw data, deleting data, or deploying
+      ransomware encryption on the data files.
+    </p>
   </div>
 
   <div class="modal" id="modal4">
     <h2>Unencrypted Data</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+    <p>Past the environment boundary protection, Remote Access Tools (RAT) can syphon raw data in stealth mode
+      while falsifying audit
+      trails.</p>
+    <p>RATs target servers and their databases as well as user machines. Encryption keys must not fall into the wrong
+      hands but
+      must be available when needed to restore data.</p>
   </div>
 
 </body>
