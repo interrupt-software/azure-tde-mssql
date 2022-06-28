@@ -20,10 +20,10 @@
     const ar_height = 9;
 
     const paths = [
-      { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg", "splash_delay": 9 },
-      { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg", "splash_delay": 3 },
-      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg", "splash_delay": 6 },
-      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg", "splash_delay": 12 }
+      { id: 8, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg", "splash_delay": 3, "modal": "modal1" },
+      { id: 9, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg", "splash_delay": 6, "modal": "modal2" },
+      { id: 7, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg", "splash_delay": 9, "modal": "modal3" },
+      { id: 10, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg", "splash_delay": 12, "modal": "modal4" }
     ];
 
     function getDivSize(classdef) {
@@ -80,6 +80,7 @@
 
       paths.forEach(path => {
         const pathDiv = document.getElementById(path.id);
+        const modal = document.getElementById(path.modal);
         pathDiv.classList.add(path.class);
 
         if (path.label.class == "cell-label-bottom") {
@@ -98,11 +99,19 @@
 
         if (path.label.class == "cell-label-top") {
           const imageDiv = document.createElement("div");
-          fetchSVG("./img/" + path.image, imageDiv);
+          fetchSVG("/img/" + path.image, imageDiv);
           pathDiv.appendChild(imageDiv);
         }
 
         pathDiv.style.setProperty("--splash-delay", path.splash_delay)
+
+        pathDiv.addEventListener("mouseover", function () {
+          modal.style.display = "block";
+        });
+
+        pathDiv.addEventListener("mouseout", function () {
+          modal.style.display = "none";
+        });
 
       })
 
@@ -135,11 +144,14 @@
     .cell {
       display: flex;
       flex-direction: column;
+      opacity: 0;
 
       animation: fadeInUp 3s ease forwards;
-      animation-delay: calc(var(--splash-delay) * 500ms);
+      animation-delay: calc(var(--splash-delay) * 200ms);
       /* background-color: lightblue; */
     }
+
+    .cell:hover {}
 
     .cell-span-2-2 {
       border-radius: 10px;
@@ -197,6 +209,36 @@
       /* background-color: lightseagreen; */
     }
 
+    .modal {
+      display: none;
+      position: fixed;
+      top: 10px;
+      box-shadow: var(--shadow-2), 0 0 0 100vw rgb(0 0 0 / 0.5);
+
+      background: lightblue;
+      color: #222;
+      border: 0;
+      border-radius: 0.25rem;
+      animation: fadeInUp 1000ms forwards, fade-in 500ms forwards;
+      padding: 20px;
+    }
+
+    .modal::backdrop {
+      background: rgb(0 0 0 / 0.5);
+      opacity: 0;
+    }
+
+    .modal[open] {
+      animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+    }
+
+    .modal[closing] {
+      display: block;
+      pointer-events: none;
+      inset: 0;
+      animation: fade-out 500ms forwards;
+    }
+
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -210,11 +252,56 @@
         transform: translateY(0);
       }
     }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="matrix" id="matrix"></div>
+
+  <div class="modal" id="modal1">
+    <h2>Unauthorized User</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+  </div>
+
+  <div class="modal" id="modal2">
+    <h2>Unauthorized Access</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+  </div>
+
+  <div class="modal" id="modal3">
+    <h2>MS SQL Servers</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+  </div>
+
+  <div class="modal" id="modal4">
+    <h2>Unencrypted Data</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+  </div>
+
 </body>
 
 </html>
