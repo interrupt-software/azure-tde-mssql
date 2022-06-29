@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="300px" height="200px" viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="225px" height="150px" viewBox="0 0 225 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@1xhashi-container-3-3</title>
     <g id="hashi-container-3-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="square" transform="translate(75.000000, 25.000000)" fill="#FFFFFF" stroke="#979797" stroke-opacity="0.5" stroke-width="4">
-            <rect id="Rectangle" x="-2" y="-2" width="154" height="154" rx="5"></rect>
+        <g id="square" transform="translate(63.000000, 25.000000)" fill="#FFFFFF" stroke="#979797" stroke-opacity="0.5" stroke-width="4">
+            <rect id="Rectangle" x="-2" y="-2" width="104" height="104" rx="5"></rect>
         </g>
-        <g id="Path_741" transform="translate(113.000000, 63.000000)" fill="#FF0000">
+        <g id="Path_741" transform="translate(75.000000, 38.000000)" fill="#FF0000">
             <path d="M37.5,0 C25.9958333,0 16.6666667,9.33333333 16.6666667,20.8333333 C16.6666667,32.3333333 25.9958333,41.6666667 37.5,41.6666667 C49.0041667,41.6666667 58.3333333,32.3333333 58.3333333,20.8333333 C58.3333333,9.33333333 49.0041667,0 37.5,0 Z M22.9166667,20.8333333 C22.9166667,12.7916667 29.4458333,6.25 37.5,6.25 C45.5541667,6.25 52.0833333,12.7916667 52.0833333,20.8333333 C52.0833333,28.875 45.5541667,35.4166667 37.5,35.4166667 C29.4458333,35.4166667 22.9166667,28.875 22.9166667,20.8333333 Z" id="Shape"></path>
             <path d="M19.7916667,47.9166667 C8.8625,47.9166667 0,56.7916667 0,67.7083333 L0,71.875 C0,73.5833333 1.4,75 3.125,75 C4.85,75 6.25,73.5833333 6.25,71.875 L6.25,67.7083333 C6.25,60.25 12.3125,54.1666667 19.7916667,54.1666667 L55.2083333,54.1666667 C62.6875,54.1666667 68.75,60.25 68.75,67.7083333 L68.75,71.875 C68.75,73.5833333 70.15,75 71.875,75 C73.6,75 75,73.5833333 75,71.875 L75,67.7083333 C75,56.7916667 66.1375,47.9166667 55.2083333,47.9166667 L19.7916667,47.9166667 Z" id="Path" fill-rule="nonzero"></path>
         </g>
