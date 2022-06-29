@@ -6,12 +6,7 @@ if (!(Test-Path -Path $EKM_WORKING_DIR)) {
 
 $BASE_URL = "https://raw.githubusercontent.com/interrupt-software/azure-tde-mssql/main/scripts"
 
-$files = `@(
-  "01-ConfigureMSSQL_DB.sql", 
-  "02-CheckMSSQL_DB.sql", 
-  "03-RotateMSSQL_DEK.sql", 
-  "04-Re-encryptMSSQL_DB.sql"
-)
+$files = "01-ConfigureMSSQL_DB.sql", "02-CheckMSSQL_DB.sql", "03-RotateMSSQL_DEK.sql", "04-Re-encryptMSSQL_DB.sql"
 
 $files | forEach-Object {
  $URL = "$BASE_URL/$PSItem"
@@ -19,7 +14,7 @@ $files | forEach-Object {
  Invoke-WebRequest -URI $URL -Outfile $local
 }
 
-$PS1Script_Local="$EKM_WORKING_DIR\$files[0]"
+$PS1Script_Local="$EKM_WORKING_DIR\01-ConfigureMSSQL_DB.sql"
 
 ((Get-Content -path $PS1Script_Local -Raw) -replace 'approle-role-id','APPROLE_ROLE_ID') | Set-Content -Path $PS1Script_Local
 
