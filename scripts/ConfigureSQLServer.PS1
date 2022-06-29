@@ -6,7 +6,7 @@ if (!(Test-Path -Path $EKM_WORKING_DIR)) {
 
 $BASE_URL = "https://raw.githubusercontent.com/interrupt-software/azure-tde-mssql/main/scripts"
 
-$files = @(
+$files = `@(
   "01-ConfigureMSSQL_DB.sql", 
   "02-CheckMSSQL_DB.sql", 
   "03-RotateMSSQL_DEK.sql", 
