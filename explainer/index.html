@@ -20,11 +20,53 @@
     const ar_height = 9;
 
     const paths = [
-      { id: 20, "class": "cell-span-3-3", "label": { "text": "Unauthorized User", "class": "cell-label-top" }, "image": "hashi-container-3-3.svg", "splash_delay": 3, "modal": "modal1" },
-      { id: 21, "class": "cell-span-4-2", "label": { "text": "Unauthorized Access", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-1.svg", "splash_delay": 6, "modal": "modal2" },
-      { id: 19, "class": "cell-span-5-5", "label": { "text": "MS SQL Servers", "class": "cell-label-top" }, "image": "hashi-container-5-5.svg", "splash_delay": 9, "modal": "modal3" },
-      { id: 22, "class": "cell-span-4-2", "label": { "text": "Unencrypted Data", "class": "cell-label-bottom", "color": "red" }, "image": "hashi-container-4-2-2.svg", "splash_delay": 12, "modal": "modal4" }
-    ];
+      {
+        "id": 20,
+        "class": "cell-span-3-3",
+        "label": {
+          "text": "Unauthorized User",
+          "class": "cell-label-top"
+        },
+        "image": "hashi-container-3-3.svg",
+        "splash_delay": 3,
+        "modal": "modal1"
+      },
+      {
+        "id": 21,
+        "class": "cell-span-4-2",
+        "label": {
+          "text": "Unauthorized Access",
+          "class": "cell-label-bottom",
+          "color": "red"
+        },
+        "image": "hashi-container-4-2-1.svg",
+        "splash_delay": 6,
+        "modal": "modal2"
+      },
+      {
+        "id": 19,
+        "class": "cell-span-5-5",
+        "label": {
+          "text": "MS SQL Servers",
+          "class": "cell-label-top"
+        },
+        "image": "hashi-container-5-5.svg",
+        "splash_delay": 9,
+        "modal": "modal3"
+      },
+      {
+        "id": 22,
+        "class": "cell-span-4-2",
+        "label": {
+          "text": "Unencrypted Data",
+          "class": "cell-label-bottom",
+          "color": "red"
+        },
+        "image": "hashi-container-4-2-2.svg",
+        "splash_delay": 12,
+        "modal": "modal4"
+      }
+    ]
 
     function getDivSize(classdef) {
       var w = parseInt(classdef.slice(10, 11));
@@ -281,14 +323,14 @@
 
   <div class="modal" id="modal1">
     <h2>Unauthorized User</h2>
-    <p>Weak authentication and insecure storage of credentials leads to account impersonation.</p>
+    <p>Weak authentication and insecure storage of credentials leads to account takeover and impersonation.</p>
     <p>If valid users hold privileges that exceed the requirements of their job function, these privileges may be abused
       by an attacker who compromises their account.</p>
   </div>
 
   <div class="modal" id="modal2">
     <h2>Unauthorized Access</h2>
-    <p>With account impersonation, bad actors can install Remote Access Tools (RAT) to target server-side data stores.
+    <p>With account impersonation, bad actors can install Remote Access Tools (RATs) to target server-side data stores.
     </p>
     <p>After attackers target a system's potential vulnerabilities, RATs can download and execute malware of
       choice.</p>
@@ -304,7 +346,7 @@
 
   <div class="modal" id="modal4">
     <h2>Unencrypted Data</h2>
-    <p>Past the environment boundary protection, Remote Access Tools (RAT) can syphon raw data in stealth mode
+    <p>Past the environment boundary protection, Remote Access Tools (RATs) can syphon raw data in stealth mode
       while falsifying audit
       trails.</p>
     <p>RATs target servers and their databases as well as user machines. Encryption keys must not fall into the wrong
