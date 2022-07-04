@@ -1,55 +1,6 @@
 const ar_width = 16;
 const ar_height = 9;
 
-const paths = [
-    {
-        "id": 20,
-        "class": "cell-span-3-3",
-        "label": {
-            "text": "Unauthorized User",
-            "class": "cell-label-top"
-        },
-        "image": "hashi-container-3-3.svg",
-        "splash_delay": 3,
-        "modal": "modal1"
-    },
-    {
-        "id": 21,
-        "class": "cell-span-4-2",
-        "label": {
-            "text": "Unauthorized Access",
-            "class": "cell-label-bottom",
-            "color": "red"
-        },
-        "image": "hashi-container-4-2-1.svg",
-        "splash_delay": 6,
-        "modal": "modal2"
-    },
-    {
-        "id": 19,
-        "class": "cell-span-5-5",
-        "label": {
-            "text": "MS SQL Servers",
-            "class": "cell-label-top"
-        },
-        "image": "hashi-container-5-5.svg",
-        "splash_delay": 9,
-        "modal": "modal3"
-    },
-    {
-        "id": 22,
-        "class": "cell-span-4-2",
-        "label": {
-            "text": "Unencrypted Data",
-            "class": "cell-label-bottom",
-            "color": "red"
-        },
-        "image": "hashi-container-4-2-2.svg",
-        "splash_delay": 12,
-        "modal": "modal4"
-    }
-];
-
 function getDivSize(classdef) {
     var w = parseInt(classdef.slice(10, 11));
     var h = parseInt(classdef.slice(12));
@@ -95,10 +46,11 @@ window.onload = function () {
 
     paths.forEach(path => {
         const pathDiv = document.getElementById(path.id);
-        const modal = document.getElementById(path.modal);
         pathDiv.classList.add(path.class);
 
-        if (path.label.class == "cell-label-bottom") {
+        // We want the image above the main label
+
+        if (path.image && path.label.class == "cell-label-bottom") {
             const imageDiv = document.createElement("div");
             fetchSVG("/img/" + path.image).then(imageSVG => {
                 imageDiv.appendChild(imageSVG.documentElement);
@@ -106,16 +58,21 @@ window.onload = function () {
             });
         }
 
-        const labelDiv = document.createElement("div");
-        labelDiv.classList.add(path.label.class);
-        if (path.label.color) {
-            labelDiv.style.color = path.label.color;
+        // This is the label. Check to ensure label exists.
+
+        if (path.label) {
+            const labelDiv = document.createElement("div");
+            labelDiv.classList.add(path.label.class);
+            if (path.label.color) {
+                labelDiv.style.color = path.label.color;
+            }
+            labelDiv.innerHTML = path.label.text;
+            pathDiv.appendChild(labelDiv);
         }
 
-        labelDiv.innerHTML = path.label.text;
-        pathDiv.appendChild(labelDiv);
+        // if we want the image after the main label
 
-        if (path.label.class == "cell-label-top") {
+        if (path.image && path.label.class == "cell-label-top") {
             const imageDiv = document.createElement("div");
             fetchSVG("/img/" + path.image).then(imageSVG => {
                 imageDiv.appendChild(imageSVG.documentElement);
@@ -125,13 +82,17 @@ window.onload = function () {
 
         pathDiv.style.setProperty("--splash-delay", path.splash_delay)
 
-        pathDiv.addEventListener("mouseover", function () {
-            modal.style.display = "block";
-        });
+        if (path.modal) {
+            const modal = document.getElementById(path.modal);
 
-        pathDiv.addEventListener("mouseout", function () {
-            modal.style.display = "none";
-        });
+            pathDiv.addEventListener("mouseover", function () {
+                modal.style.display = "block";
+            });
+
+            pathDiv.addEventListener("mouseout", function () {
+                modal.style.display = "none";
+            });
+        }
 
     })
 
