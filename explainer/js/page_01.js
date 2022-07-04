@@ -7,7 +7,8 @@ const paths = [
             "text": "Setup Working Environment",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated"
+        "boxtype": "cell-decorated",
+        "innerHTML": "/html/templates/01_template.html"
     },
     {
         "id": 14,
@@ -38,20 +39,22 @@ const paths = [
         "class": "cell-span-3-2",
         "splash_delay": 3,
         "label": {
-            "text": "Configure DEK Requirements",
+            "text": "Encrypt an MSSQL Database",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated"
+        "boxtype": "cell-decorated",
+        "innerHTML": "/html/templates/03_template.html"
     },
     {
         "id": 21,
         "class": "cell-span-3-2",
         "splash_delay": 3,
         "label": {
-            "text": "Encrypt an MSSQL Database",
+            "text": "Configure DEK Requirements",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated"
+        "boxtype": "cell-decorated",
+        "innerHTML": "/html/templates/02_template.html"
     },
     {
         "id": 25,
@@ -61,6 +64,7 @@ const paths = [
             "text": "Rotate Database DEK",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated"
+        "boxtype": "cell-decorated",
+        "innerHTML": "/html/templates/04_template.html"
     }
 ];

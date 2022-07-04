@@ -37,13 +37,6 @@ for (let i = 0; i < track_pages.length; i++) {
             setNextPage(track_pages[i + 1]);
         } else if (i == (track_pages.length - 1) && i >= 0) {
             setLastPage(track_pages[i - 1]);
-            // const last_page = document.createElement('div');
-            // const last_url = "/html/" + track_pages[i - 1] + ".html";
-            // last_page.classList.add("last");
-            // last_page.addEventListener("click", function () {
-            //     window.location.replace(next_url);
-            // });
-            // document.body.appendChild(last_page);
         } else {
             setNextPage(track_pages[i + 1]);
             setLastPage(track_pages[i - 1]);

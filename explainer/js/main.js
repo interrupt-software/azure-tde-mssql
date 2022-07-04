@@ -111,6 +111,16 @@ window.onload = function () {
                 });
             }
 
+            if (path.innerHTML) {
+                const innerContent = document.createElement("div");
+                const content = path.innerHTML;
+                fetch(content)
+                    .then(r => r.text())
+                    .then(t => innerContent.innerHTML = t);
+                innerContent.classList.add("cell-content");
+                pathDiv.appendChild(innerContent);
+            }
+
         })
     }
 

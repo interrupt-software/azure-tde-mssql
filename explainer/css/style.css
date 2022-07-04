@@ -108,11 +108,18 @@ body {
     font-weight: 900;
     height: calc(var(--cell-height)/2);
     text-align: center;
+    padding: 10px;
     /* background-color: lightseagreen; */
 }
 
 .cell-decorated {
     border: 3px solid rgba(151, 151, 151, 0.5);
+}
+
+.cell-content {
+    padding: 0 20px;
+    font-size: small;
+    text-align: center;
 }
 
 .modal {
