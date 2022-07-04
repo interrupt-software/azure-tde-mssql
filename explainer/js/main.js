@@ -39,61 +39,71 @@ window.onload = function () {
             var newDiv = document.createElement("div");
             newDiv.id = i * grid_columns + j;
             newDiv.classList.add("cell");
-            // newDiv.innerHTML = newDiv.id;
+            newDiv.innerHTML = newDiv.id;
             matrix.appendChild(newDiv);
         }
     }
 
-    paths.forEach(path => {
-        const pathDiv = document.getElementById(path.id);
-        pathDiv.classList.add(path.class);
+    // If we have a paths map, load them in sequence
+    // TO DO: Create class module to make this process
+    // easier for the developer.
 
-        // We want the image above the main label
+    if (paths) {
+        paths.forEach(path => {
+            const pathDiv = document.getElementById(path.id);
+            pathDiv.classList.add(path.class);
 
-        if (path.image && path.label.class == "cell-label-bottom") {
-            const imageDiv = document.createElement("div");
-            fetchSVG("/img/" + path.image).then(imageSVG => {
-                imageDiv.appendChild(imageSVG.documentElement);
-                pathDiv.appendChild(imageDiv);
-            });
-        }
+            // We want the image above the main label
 
-        // This is the label. Check to ensure label exists.
-
-        if (path.label) {
-            const labelDiv = document.createElement("div");
-            labelDiv.classList.add(path.label.class);
-            if (path.label.color) {
-                labelDiv.style.color = path.label.color;
+            if (path.image && path.label.class == "cell-label-bottom") {
+                const imageDiv = document.createElement("div");
+                fetchSVG("/img/" + path.image).then(imageSVG => {
+                    imageDiv.appendChild(imageSVG.documentElement);
+                    pathDiv.appendChild(imageDiv);
+                });
             }
-            labelDiv.innerHTML = path.label.text;
-            pathDiv.appendChild(labelDiv);
-        }
 
-        // if we want the image after the main label
+            // This is the label. Check to ensure label exists.
 
-        if (path.image && path.label.class == "cell-label-top") {
-            const imageDiv = document.createElement("div");
-            fetchSVG("/img/" + path.image).then(imageSVG => {
-                imageDiv.appendChild(imageSVG.documentElement);
-                pathDiv.appendChild(imageDiv);
-            });
-        }
+            if (path.label) {
+                const labelDiv = document.createElement("div");
+                labelDiv.classList.add(path.label.class);
+                if (path.label.color) {
+                    labelDiv.style.color = path.label.color;
+                }
+                labelDiv.innerHTML = path.label.text;
+                pathDiv.appendChild(labelDiv);
+            }
 
-        pathDiv.style.setProperty("--splash-delay", path.splash_delay)
+            // if we want the image after the main label
 
-        if (path.modal) {
-            const modal = document.getElementById(path.modal);
+            if (path.image && path.label.class == "cell-label-top") {
+                const imageDiv = document.createElement("div");
+                fetchSVG("/img/" + path.image).then(imageSVG => {
+                    imageDiv.appendChild(imageSVG.documentElement);
+                    pathDiv.appendChild(imageDiv);
+                });
+            }
 
-            pathDiv.addEventListener("mouseover", function () {
-                modal.style.display = "block";
-            });
+            pathDiv.style.setProperty("--splash-delay", path.splash_delay)
 
-            pathDiv.addEventListener("mouseout", function () {
-                modal.style.display = "none";
-            });
-        }
+            // If we have an overlay modal in the path map
 
-    })
+            if (path.modal) {
+                const modal = document.getElementById(path.modal);
+
+                pathDiv.addEventListener("mouseover", function () {
+                    modal.style.display = "block";
+                });
+
+                pathDiv.addEventListener("mouseout", function () {
+                    modal.style.display = "none";
+                });
+            }
+
+        })
+    }
+
+
 
 };
