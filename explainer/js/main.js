@@ -20,7 +20,7 @@ window.onload = function () {
 
     var styles = getComputedStyle(document.documentElement);
     var grid_columns = styles.getPropertyValue("--grid-columns");
-    var grid_rows = Math.round(grid_columns / (ar_width / ar_height) - 1);
+    var grid_rows = Math.round(grid_columns / (ar_width / ar_height));
     document.documentElement.style.setProperty("--grid-rows", grid_rows);
 
     var offset = 0;
@@ -39,7 +39,7 @@ window.onload = function () {
             var newDiv = document.createElement("div");
             newDiv.id = i * grid_columns + j;
             newDiv.classList.add("cell");
-            newDiv.innerHTML = newDiv.id;
+            // newDiv.innerHTML = newDiv.id;
             matrix.appendChild(newDiv);
         }
     }
@@ -53,19 +53,24 @@ window.onload = function () {
             const pathDiv = document.getElementById(path.id);
             pathDiv.classList.add(path.class);
 
-            // We want the image above the main label
-
-            if (path.image && path.label.class == "cell-label-bottom") {
-                const imageDiv = document.createElement("div");
-                fetchSVG("/img/" + path.image).then(imageSVG => {
-                    imageDiv.appendChild(imageSVG.documentElement);
-                    pathDiv.appendChild(imageDiv);
-                });
+            if (path.boxtype) {
+                pathDiv.classList.add(path.boxtype);
+                console.log(path.boxtype)
             }
 
-            // This is the label. Check to ensure label exists.
+            // We want the image above the main label
 
             if (path.label) {
+                if (path.image && path.label.class == "cell-label-bottom") {
+                    const imageDiv = document.createElement("div");
+                    fetchSVG("/img/" + path.image).then(imageSVG => {
+                        imageDiv.appendChild(imageSVG.documentElement);
+                        pathDiv.appendChild(imageDiv);
+                    });
+                }
+
+                // This is the label. Check to ensure label exists.
+
                 const labelDiv = document.createElement("div");
                 labelDiv.classList.add(path.label.class);
                 if (path.label.color) {
@@ -73,11 +78,17 @@ window.onload = function () {
                 }
                 labelDiv.innerHTML = path.label.text;
                 pathDiv.appendChild(labelDiv);
-            }
 
-            // if we want the image after the main label
+                // if we want the image after the main label
 
-            if (path.image && path.label.class == "cell-label-top") {
+                if (path.image && path.label.class == "cell-label-top") {
+                    const imageDiv = document.createElement("div");
+                    fetchSVG("/img/" + path.image).then(imageSVG => {
+                        imageDiv.appendChild(imageSVG.documentElement);
+                        pathDiv.appendChild(imageDiv);
+                    });
+                }
+            } else if (path.image) {
                 const imageDiv = document.createElement("div");
                 fetchSVG("/img/" + path.image).then(imageSVG => {
                     imageDiv.appendChild(imageSVG.documentElement);

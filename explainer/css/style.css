@@ -39,7 +39,7 @@ body {
     display: inline-grid;
     grid-template-columns: repeat(var(--grid-columns), var(--cell-width));
     grid-template-rows: repeat(var(--grid-rows), var(--cell-height));
-    grid-gap: 2px;
+    /* grid-gap: 1px; */
 }
 
 .cell {
@@ -49,7 +49,7 @@ body {
 
     animation: fadeInUp 3s ease forwards;
     animation-delay: calc(var(--splash-delay) * 200ms);
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .cell:hover {}
@@ -97,6 +97,8 @@ body {
     text-transform: uppercase;
     font-weight: 900;
     height: calc(var(--cell-height)/2);
+    text-align: center;
+    padding: 10px;
     /* background-color: lightcoral; */
 }
 
@@ -107,7 +109,12 @@ body {
     text-transform: uppercase;
     font-weight: 900;
     height: calc(var(--cell-height)/2);
+    text-align: center;
     /* background-color: lightseagreen; */
+}
+
+.cell-decorated {
+    border: 3px solid #222;
 }
 
 .modal {

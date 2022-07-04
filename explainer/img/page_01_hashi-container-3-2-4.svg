@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="225px" height="150px" viewBox="0 0 225 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>page_01_hashi-container-3-2-4</title>
+    <g id="page_01_hashi-container-3-2-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <line x1="0.5" y1="75.5" x2="93.5" y2="75.5" id="Line" stroke="#222222" stroke-width="3" stroke-linecap="square"></line>
+        <circle id="Oval" stroke="#222222" stroke-width="3" fill="#FFFFFF" stroke-linecap="square" cx="114" cy="75" r="20"></circle>
+        <line x1="114.5" y1="148.5" x2="114.5" y2="96.5" id="Line" stroke="#222222" stroke-width="3" stroke-linecap="square"></line>
+        <text id="4" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" letter-spacing="0.24" fill="#000000">
+            <tspan x="106.208" y="84">4</tspan>
+        </text>
+    </g>
+</svg>
