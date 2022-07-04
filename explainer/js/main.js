@@ -55,7 +55,6 @@ window.onload = function () {
 
             if (path.boxtype) {
                 pathDiv.classList.add(path.boxtype);
-                console.log(path.boxtype)
             }
 
             // We want the image above the main label

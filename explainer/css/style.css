@@ -52,8 +52,6 @@ body {
     /* background-color: lightblue; */
 }
 
-.cell:hover {}
-
 .cell-span-2-2 {
     border-radius: 10px;
     grid-column: span 2;
@@ -166,4 +164,26 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+.next {
+    background-image: url("/img/right-arrow.svg");
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.last {
+    background-image: url("/img/left-arrow.svg");
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    left: 50px;
+    cursor: pointer;
 }
