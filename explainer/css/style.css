@@ -114,7 +114,7 @@ body {
 }
 
 .cell-decorated {
-    border: 3px solid #222;
+    border: 3px solid rgba(151, 151, 151, 0.5);
 }
 
 .modal {
