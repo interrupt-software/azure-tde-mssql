@@ -25,9 +25,14 @@ window.onload = function () {
 
     var offset = 0;
 
-    paths.forEach(path => {
-        offset += getDivSize(path.class);
-    })
+    // This operation reflects a small cost, so
+    // it is ok to iterate here and in later on... for now.
+
+    if (typeof paths !== 'undefined') {
+        paths.forEach(path => {
+            offset += getDivSize(path.class);
+        })
+    }
 
     var matrix_size = grid_columns * grid_rows;
     var matrix_true_size = matrix_size - offset;
@@ -48,7 +53,7 @@ window.onload = function () {
     // TO DO: Create class module to make this process
     // easier for the developer.
 
-    if (paths) {
+    if (typeof paths !== 'undefined') {
         paths.forEach(path => {
             const pathDiv = document.getElementById(path.id);
             pathDiv.classList.add(path.class);
@@ -113,11 +118,11 @@ window.onload = function () {
 
             if (path.innerHTML) {
                 const innerContent = document.createElement("div");
-                const content = path.innerHTML;
+                const content = path.innerHTML.template;
                 fetch(content)
                     .then(r => r.text())
                     .then(t => innerContent.innerHTML = t);
-                innerContent.classList.add("cell-content");
+                innerContent.classList.add(path.innerHTML.template_class);
                 pathDiv.appendChild(innerContent);
             }
 
