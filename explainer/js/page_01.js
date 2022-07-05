@@ -8,6 +8,7 @@ const paths = [
     {
         "id": 14,
         "class": "cell-span-6-5",
+        "splash_delay": 1,
         "innerHTML": {
             "template": "/html/templates/p01_t01.html",
             "template_class": "cell-content-normal",
