@@ -1,82 +1,48 @@
 const paths = [
     {
-        "id": 0,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
+        "id": 20,
+        "class": "cell-span-3-3",
         "label": {
-            "text": "Setup Working Environment",
+            "text": "Unauthorized User",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated",
-        "innerHTML": {
-            "template": "/html/templates/01_template.html",
-            "template_class": "cell-content-small",
-        }
-    },
-    {
-        "id": 14,
-        "class": "cell-span-3-2",
+        "image": "page_02_hashi-container-3-3.svg",
         "splash_delay": 3,
-        "image": "page_01_hashi-container-3-2-1.svg"
-    },
-    {
-        "id": 15,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
-        "image": "page_01_hashi-container-3-2-2.svg"
-    },
-    {
-        "id": 16,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
-        "image": "page_01_hashi-container-3-2-3.svg"
-    },
-    {
-        "id": 17,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
-        "image": "page_01_hashi-container-3-2-4.svg"
-    },
-    {
-        "id": 4,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
-        "label": {
-            "text": "Encrypt an MSSQL Database",
-            "class": "cell-label-top"
-        },
-        "boxtype": "cell-decorated",
-        "innerHTML": {
-            "template": "/html/templates/03_template.html",
-            "template_class": "cell-content-small",
-        }
+        "modal": "modal1"
     },
     {
         "id": 21,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
+        "class": "cell-span-4-2",
         "label": {
-            "text": "Configure DEK Requirements",
-            "class": "cell-label-top"
+            "text": "Unauthorized Access",
+            "class": "cell-label-bottom",
+            "color": "red"
         },
-        "boxtype": "cell-decorated",
-        "innerHTML": {
-            "template": "/html/templates/02_template.html",
-            "template_class": "cell-content-small",
-        }
+        "image": "page_02_hashi-container-4-2-1.svg",
+        "splash_delay": 6,
+        "modal": "modal2"
     },
     {
-        "id": 25,
-        "class": "cell-span-3-2",
-        "splash_delay": 3,
+        "id": 19,
+        "class": "cell-span-5-5",
         "label": {
-            "text": "Rotate Database DEK",
+            "text": "MS SQL Servers",
             "class": "cell-label-top"
         },
-        "boxtype": "cell-decorated",
-        "innerHTML": {
-            "template": "/html/templates/04_template.html",
-            "template_class": "cell-content-small",
-        }
+        "image": "page_02_hashi-container-5-5.svg",
+        "splash_delay": 9,
+        "modal": "modal3"
+    },
+    {
+        "id": 22,
+        "class": "cell-span-4-2",
+        "label": {
+            "text": "Unencrypted Data",
+            "class": "cell-label-bottom",
+            "color": "red"
+        },
+        "image": "page_02_hashi-container-4-2-2.svg",
+        "splash_delay": 12,
+        "modal": "modal4"
     }
 ];

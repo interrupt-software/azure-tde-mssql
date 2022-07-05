@@ -27,8 +27,8 @@ function setLastPage(lastPage) {
 const track_pages = [
     "01-about-this-track",
     "02-why-enable-tde",
-    "03-track-contents",
-    "04-about-tde"
+    "03-about-tde",
+    "04-track-contents"
 ];
 
 for (let i = 0; i < track_pages.length; i++) {
