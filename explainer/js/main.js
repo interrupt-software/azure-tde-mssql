@@ -20,7 +20,7 @@ window.onload = function () {
 
     var styles = getComputedStyle(document.documentElement);
     var grid_columns = styles.getPropertyValue("--grid-columns");
-    var grid_rows = Math.round(grid_columns / (ar_width / ar_height));
+    var grid_rows = Math.round(grid_columns / (ar_width / ar_height) - 1);
     document.documentElement.style.setProperty("--grid-rows", grid_rows);
 
     var offset = 0;
@@ -35,7 +35,7 @@ window.onload = function () {
     }
 
     var matrix_size = grid_columns * grid_rows;
-    var matrix_true_size = matrix_size - offset;
+    var matrix_true_size = matrix_size - offset + 2;
 
     const matrix = document.getElementById("matrix");
 

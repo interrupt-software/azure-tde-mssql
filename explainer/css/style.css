@@ -93,6 +93,12 @@ body {
     grid-row: span 5;
 }
 
+.cell-span-5-6 {
+    border-radius: 10px;
+    grid-column: span 5;
+    grid-row: span 6;
+}
+
 .cell-span-6-5 {
     border-radius: 10px;
     grid-column: span 6;

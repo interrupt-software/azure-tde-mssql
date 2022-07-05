@@ -1,12 +1,12 @@
 const paths = [
     {
-        "id": 12,
+        "id": 0,
         "class": "cell-span-5-5",
         "splash_delay": 3,
         "image": "vault_logo.svg",
     },
     {
-        "id": 14,
+        "id": 2,
         "class": "cell-span-6-5",
         "splash_delay": 1,
         "innerHTML": {
