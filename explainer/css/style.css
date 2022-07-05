@@ -105,6 +105,12 @@ body {
     grid-row: span 5;
 }
 
+.cell-span-12-5 {
+    border-radius: 10px;
+    grid-column: span 12;
+    grid-row: span 5;
+}
+
 .cell-label-top {
     display: flex;
     justify-content: center;
