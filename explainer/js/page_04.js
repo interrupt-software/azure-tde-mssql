@@ -9,7 +9,7 @@ const paths = [
         },
         "boxtype": "cell-decorated",
         "innerHTML": {
-            "template": "/html/templates/01_template.html",
+            "template": "/html/templates/p04_t01.html",
             "template_class": "cell-content-small",
         }
     },
@@ -47,7 +47,7 @@ const paths = [
         },
         "boxtype": "cell-decorated",
         "innerHTML": {
-            "template": "/html/templates/03_template.html",
+            "template": "/html/templates/p04_t03.html",
             "template_class": "cell-content-small",
         }
     },
@@ -61,7 +61,7 @@ const paths = [
         },
         "boxtype": "cell-decorated",
         "innerHTML": {
-            "template": "/html/templates/02_template.html",
+            "template": "/html/templates/p04_t02.html",
             "template_class": "cell-content-small",
         }
     },
@@ -75,7 +75,7 @@ const paths = [
         },
         "boxtype": "cell-decorated",
         "innerHTML": {
-            "template": "/html/templates/04_template.html",
+            "template": "/html/templates/p04_t04.html",
             "template_class": "cell-content-small",
         }
     }
