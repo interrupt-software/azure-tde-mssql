@@ -44,7 +44,7 @@ body {
     display: inline-grid;
     grid-template-columns: repeat(var(--grid-columns), var(--cell-width));
     grid-template-rows: repeat(var(--grid-rows), var(--cell-height));
-    /* grid-gap: 2px; */
+    /* grid-gap: 1px; */
 }
 
 .cell {

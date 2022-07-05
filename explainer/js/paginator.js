@@ -28,7 +28,8 @@ const track_pages = [
     "01-about-this-track",
     "02-why-enable-tde",
     "03-about-tde",
-    "04-track-contents"
+    "04-track-contents",
+    "05-working-environment"
 ];
 
 for (let i = 0; i < track_pages.length; i++) {
