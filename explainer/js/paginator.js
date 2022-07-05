@@ -1,6 +1,34 @@
+const track_pages = [
+    [
+        "01-about-this-track",
+        "04-track-contents",
+        "05-working-environment"
+    ],
+    [
+        "06-what-is-tde",
+        "03-about-tde"
+    ],
+    [
+        "02-why-enable-tde",
+        "03-about-tde"
+    ]
+];
+
 const current_page = (location.href.split("/").slice(-1)[0]).split(".")[0];
 
-function isLocalPage(pageName) {
+var challenge_pages;
+
+function find_section(pageName) {
+    track_pages.forEach(section => {
+        if (section.indexOf(pageName) !== -1) {
+            challenge_pages = section;
+        }
+    })
+}
+
+find_section(current_page);
+
+function isCurrentPage(pageName) {
     return current_page === pageName;
 }
 
@@ -24,23 +52,15 @@ function setLastPage(lastPage) {
     document.body.appendChild(last_page);
 }
 
-const track_pages = [
-    "01-about-this-track",
-    "02-why-enable-tde",
-    "03-about-tde",
-    "04-track-contents",
-    "05-working-environment"
-];
-
-for (let i = 0; i < track_pages.length; i++) {
-    if (isLocalPage(track_pages[i])) {
-        if (i == 0 && (i + 1) < track_pages.length) {
-            setNextPage(track_pages[i + 1]);
-        } else if (i == (track_pages.length - 1) && i >= 0) {
-            setLastPage(track_pages[i - 1]);
+for (let i = 0; i < challenge_pages.length; i++) {
+    if (isCurrentPage(challenge_pages[i])) {
+        if (i == 0 && (i + 1) < challenge_pages.length) {
+            setNextPage(challenge_pages[i + 1]);
+        } else if (i == (challenge_pages.length - 1) && i >= 0) {
+            setLastPage(challenge_pages[i - 1]);
         } else {
-            setNextPage(track_pages[i + 1]);
-            setLastPage(track_pages[i - 1]);
+            setNextPage(challenge_pages[i + 1]);
+            setLastPage(challenge_pages[i - 1]);
         }
     }
 }
