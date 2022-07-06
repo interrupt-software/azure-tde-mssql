@@ -11,7 +11,8 @@ const track_pages = [
         "how-ekm-works",
     ],
     [
-        "why-enable-tde",
+        "dek-key-exchange",
+        "describe-benefits",
     ]
 ];
 

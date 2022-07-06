@@ -1,33 +1,34 @@
 <table class="styled-table">
     <tr>
-        <th>Challenges</th>
-        <th>Consequences</th>
+        <th>Approach</th>
+        <th>Benefits</th>
     </tr>
     <tr>
         <td><strong>Security Model</strong>:
-            With a weak security standard, every database server manages its own
-            Data Encryption Key and Key Encryption Key.
+            Adopt a zero-trust security posture and remove single-points-of-failure
+            in the protection chain for DEK and KEK.
         </td>
-        <td>The attack surface for database servers innadvertedly offers an additional
-            exploit vector because exfiltrated data can be unencrypted.
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Inefficient Workflow</strong>:
-            Database servers follow manual processes to manage
-            the lifecycle of Data Encryption Keys and Key Encryption Keys.
-        </td>
-        <td>Incosistent practices to rotate encryption keys, re-encrypt data
-            at rest, and validation of data integrity.
+        <td> Attackers cannot exploit exfiltrated data when database servers do not
+            expose their unencrypted Data Encryption Key and Key Encryption Key.
         </td>
     </tr>
     <tr>
-        <td><strong>Inadequate Governance</strong>:
-            There is no centralized audit trail to provide visibility to
+        <td><strong>Centralized Workflow</strong>:
+            Establish and enforce strong guidelines to rotate encryption keys,
+            re-encrypt data at rest, and validate data integrity with automation.
+        </td>
+        <td> Database servers adhere to a centralized, automated workflow to manage the
+            lifecycle of Data Encryption Keys and Key Encryption Keys.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Strong Governance</strong>:
+            Enforce a centralized audit trail to provide visibility to
             ensure key management lifecycle is complainant and reported.
         </td>
-        <td>Teams do not follow authentication and authorization processes,
-            leading to a waeker defensive posture.
+        <td>Teams establish authentication and authorization processes for the
+            lifecycle of encryption keys, enforced by policies that support audit
+            and control standards.
         </td>
     </tr>
 </table>

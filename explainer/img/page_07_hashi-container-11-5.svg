@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="825px" height="375px" viewBox="0 0 825 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>page_06_hashi-container-11-5</title>
+    <title>page_07_hashi-container-11-5</title>
     <defs>
         <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
             <stop stop-color="#005BA1" offset="0%"></stop>
@@ -17,7 +17,7 @@
             <stop stop-color="#E6E6E6" offset="100%"></stop>
         </radialGradient>
     </defs>
-    <g id="page_06_hashi-container-11-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="page_07_hashi-container-11-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect id="Rectangle" stroke="#DBDBDC" stroke-width="4" fill="#FFFFFF" x="384" y="22" width="271" height="350" rx="5"></rect>
         <g id="Group-4" transform="translate(413.000000, 3.000000)">
             <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="45" height="38"></rect>
@@ -60,14 +60,16 @@
         <text id="Windows-DLL" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
             <tspan x="133.536" y="189">Windows DLL</tspan>
         </text>
+        <path id="Line-3" d="M112.862354,179 L117.362354,188 L113.362,187.999 L113.362,215.999 L117.362354,216 L112.862354,225 L108.362354,216 L112.362,216 L112.362,188 L108.362354,188 L112.862354,179 Z" fill="#979797" fill-rule="nonzero"></path>
         <rect id="Rectangle" stroke="#1E90FF" fill-opacity="0.5" fill="#87CEEB" x="38.5" y="232.5" width="149" height="74" rx="5"></rect>
         <rect id="Rectangle" stroke="#1E90FF" fill-opacity="0.5" fill="#87CEEB" x="38.5" y="97.5" width="149" height="74" rx="5"></rect>
         <text id="Database-Engine" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
             <tspan x="62.129502" y="289">Database</tspan>
             <tspan x="67.2292676" y="300">Engine</tspan>
         </text>
-        <text id="DEK" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
-            <tspan x="132.864023" y="289">DEK</tspan>
+        <text id="Encrypted-DEK" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="120.089385" y="289">Encrypted</tspan>
+            <tspan x="132.864023" y="300">DEK</tspan>
         </text>
         <g id="10130-icon-service-SQL-Database" transform="translate(71.000000, 245.000000)" fill-rule="nonzero">
             <path d="M11.3117647,8.18823529 C5.06470588,8.18823529 0,6.42352941 0,4.09411765 L0,25.9058824 C0,28.1470588 4.97647059,29.9647059 11.1529412,30 L11.3117647,30 C17.5588235,30 22.6235294,28.2352941 22.6235294,25.9058824 L22.6235294,4.09411765 C22.6235294,6.37058824 17.5588235,8.18823529 11.3117647,8.18823529 Z" id="Path" fill="url(#linearGradient-1)"></path>
@@ -85,11 +87,22 @@
                 <path d="M0,0 L15.4125809,30 L30.9365332,0 L0,0 Z M13.0157026,11.9091591 L10.5601856,11.9091591 L10.5601856,9.45392331 L13.0157026,9.45392331 L13.0157026,11.9091591 Z M13.0157026,8.22489922 L10.5601856,8.22489922 L10.5601856,5.77247586 L13.0157026,5.77247586 L13.0157026,8.22489922 Z M16.6974313,15.5906065 L14.2419143,15.5906065 L14.2419143,13.1353708 L16.6974313,13.1353708 L16.6974313,15.5906065 Z M16.6974313,11.9091591 L14.2419143,11.9091591 L14.2419143,9.45392331 L16.6974313,9.45392331 L16.6974313,11.9091591 Z M16.6974313,8.22489922 L14.2419143,8.22489922 L14.2419143,5.77247586 L16.6974313,5.77247586 L16.6974313,8.22489922 Z M20.3596138,11.9091591 L17.9042374,11.9091591 L17.9042374,9.45392331 L20.3596138,9.45392331 L20.3596138,11.9091591 Z M17.9042374,8.22489922 L17.9042374,5.77247586 L20.3596138,5.77247586 L20.3596138,8.22489922 L17.9042374,8.22489922 Z" id="Vector_48"></path>
             </g>
         </g>
+        <text id="Key-Exchange" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="49.664" y="205">Key Exchange</tspan>
+        </text>
         <text id="Authenticate-with-RO" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
             <tspan x="256.192" y="91">Authenticate with ROLE ID </tspan>
             <tspan x="271.024" y="101">and ROLE SECRET</tspan>
         </text>
+        <text id="Send-DEK" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="331.832" y="233">Send DEK</tspan>
+        </text>
+        <text id="Return-Encrypted-DEK" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="270" y="293">Return Encrypted DEK</tspan>
+        </text>
         <path id="Line-3" d="M371,116 L380,120.5 L371,125 L370.999,121 L194.137646,121 L194.137646,120 L370.999,120 L371,116 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Line-3" d="M290,134.5 C295.703924,134.5 300.345573,139.048142 300.496226,144.715705 L300.5,145 L300.5,245.335805 C300.5,247.750078 302.401237,249.720294 304.788164,249.830907 L305,249.835805 L305.050501,249.835521 L370.995,249.095 L370.950035,245.095674 L379.999969,249.494389 L371.051036,254.095107 L371.006,250.095 L305.061723,250.835458 L305,250.835805 C302.036521,250.835805 299.620461,248.492025 299.504367,245.557012 L299.5,245.335805 L299.5,145 C299.5,139.843755 295.392106,135.646961 290.270479,135.503776 L290,135.5 L194.5,135.5 L194.5,134.5 L290,134.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Line-3" d="M203.5,154.5 L194.5,150 L203.5,145.5 L203.5,149.5 L260,149.5 C265.703924,149.5 270.345573,154.048142 270.496226,159.715705 L270.5,160 L270.5,264.977221 C270.5,267.391494 272.401237,269.36171 274.788164,269.472323 L275,269.477221 L275.020454,269.477175 L379.997727,269.000005 L380.497722,268.997732 L380.502268,269.997722 L380.002273,269.999995 L275.025,270.477164 L275,270.477221 C272.036521,270.477221 269.620461,268.133441 269.504367,265.198428 L269.5,264.977221 L269.5,160 C269.5,154.843755 265.392106,150.646961 260.270479,150.503776 L260,150.5 L203.5,150.5 L203.5,154.5 Z" fill="#979797" fill-rule="nonzero"></path>
         <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="546.5" y="344.5" width="91" height="16" rx="2"></rect>
         <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="539.5" y="336.5" width="91" height="16" rx="2"></rect>
         <polyline id="Line-3" stroke="#DBDBDC" stroke-linecap="square" points="472 277.5 428 277 428 256"></polyline>
