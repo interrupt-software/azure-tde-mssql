@@ -58,7 +58,8 @@ body {
     flex-direction: column;
     opacity: 0;
 
-    animation: fadeInUp 3s ease forwards;
+    animation: fadeInUp ease forwards;
+    animation-duration: calc(var(--splash-delay) * 200ms);
     animation-delay: calc(var(--splash-delay) * 200ms);
     /* background-color: lightblue; */
 }
