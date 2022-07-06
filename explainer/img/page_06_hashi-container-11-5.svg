@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="825px" height="375px" viewBox="0 0 825 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>page_06_hashi-container-11-5</title>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#005BA1" offset="0%"></stop>
+            <stop stop-color="#0060A9" offset="7%"></stop>
+            <stop stop-color="#0071C8" offset="36%"></stop>
+            <stop stop-color="#0078D4" offset="52%"></stop>
+            <stop stop-color="#0074CD" offset="64%"></stop>
+            <stop stop-color="#006ABB" offset="82%"></stop>
+            <stop stop-color="#005BA1" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50.3435013%" cy="50.1177378%" fx="50.3435013%" fy="50.1177378%" r="135.121683%" gradientTransform="translate(0.503435,0.501177),scale(0.509448,1.000000),translate(-0.503435,-0.501177)" id="radialGradient-2">
+            <stop stop-color="#F2F2F2" offset="0%"></stop>
+            <stop stop-color="#EEEEEE" offset="58%"></stop>
+            <stop stop-color="#E6E6E6" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="page_06_hashi-container-11-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#DBDBDC" stroke-width="4" fill="#FFFFFF" x="384" y="25" width="271" height="345" rx="5"></rect>
+        <polyline id="Line-3" stroke="#DBDBDC" stroke-linecap="square" points="472 285.5 428 285 428 264"></polyline>
+        <polyline id="Line-3" stroke="#DBDBDC" stroke-linecap="square" points="503 315 488 315 488 294"></polyline>
+        <polyline id="Line-3" stroke="#DBDBDC" stroke-linecap="square" points="536 345 521 345 521 324"></polyline>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="412.5" y="52.5" width="211" height="16" rx="2"></rect>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="457.5" y="82.5" width="151" height="16" rx="2"></rect>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="487.5" y="112.5" width="121" height="16" rx="2"></rect>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="487.5" y="142.5" width="121" height="16" rx="2"></rect>
+        <g id="Group-4" transform="translate(413.000000, 8.000000)">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="45" height="38"></rect>
+            <g id="Logo-Group_13" transform="translate(4.000000, 2.000000)" fill="#000001" fill-rule="nonzero">
+                <path d="M0,0 L18.495097,36 L37.1238399,0 L0,0 Z M15.6188432,14.2909909 L12.6722227,14.2909909 L12.6722227,11.344708 L15.6188432,11.344708 L15.6188432,14.2909909 Z M15.6188432,9.86987907 L12.6722227,9.86987907 L12.6722227,6.92697103 L15.6188432,6.92697103 L15.6188432,9.86987907 Z M20.0369176,18.7087279 L17.0902972,18.7087279 L17.0902972,15.7624449 L20.0369176,15.7624449 L20.0369176,18.7087279 Z M20.0369176,14.2909909 L17.0902972,14.2909909 L17.0902972,11.344708 L20.0369176,11.344708 L20.0369176,14.2909909 Z M20.0369176,9.86987907 L17.0902972,9.86987907 L17.0902972,6.92697103 L20.0369176,6.92697103 L20.0369176,9.86987907 Z M24.4315365,14.2909909 L21.4850848,14.2909909 L21.4850848,11.344708 L24.4315365,11.344708 L24.4315365,14.2909909 Z M21.4850848,9.86987907 L21.4850848,6.92697103 L24.4315365,6.92697103 L24.4315365,9.86987907 L21.4850848,9.86987907 Z" id="Vector_48"></path>
+            </g>
+        </g>
+        <text id="AUTHENTICATION" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="477.704961" y="63">AUTHENTICATION</tspan>
+        </text>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="412.5" y="172.5" width="211" height="16" rx="2"></rect>
+        <text id="AUTHORIZATION" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="480.500937" y="183">AUTHORIZATION</tspan>
+        </text>
+        <text id="APP-ROLE" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="509.715928" y="93">APP ROLE</tspan>
+        </text>
+        <text id="ROLE-ID" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="529.434512" y="123">ROLE ID</tspan>
+        </text>
+        <text id="Credentials-Renewal:" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="683" y="122">Credentials Renewal: </tspan>
+            <tspan x="778.418809" y="122" font-family="Helvetica" font-weight="normal">Establish </tspan>
+            <tspan x="683" y="133" font-family="Helvetica" font-weight="normal">renewal schedule for re-instating </tspan>
+            <tspan x="683" y="144" font-family="Helvetica" font-weight="normal">the credentials on the EKM </tspan>
+            <tspan x="683" y="155" font-family="Helvetica" font-weight="normal">provider.</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#DBDBDC" fill="#FFFFFF" x="457.5" y="202.5" width="61" height="31" rx="2"></rect>
+        <text id="POLICY" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="470.978047" y="213">POLICY</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#DBDBDC" fill="#FFFFFF" x="547.5" y="202.5" width="61" height="31" rx="2"></rect>
+        <text id="READ-WRITE" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="565.069268" y="213">READ</tspan>
+            <tspan x="563.277441" y="224">WRITE</tspan>
+        </text>
+        <text id="ROLE-SECRET" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="515.501826" y="153">ROLE SECRET</tspan>
+        </text>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="412.5" y="247.5" width="211" height="16" rx="2"></rect>
+        <text id="SECRETS-ENGINE" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="477.612676" y="258">SECRETS ENGINE</tspan>
+        </text>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="472.5" y="277.5" width="151" height="16" rx="2"></rect>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="502.5" y="307.5" width="121" height="16" rx="2"></rect>
+        <rect id="Rectangle" stroke-opacity="0.5" stroke="#979797" fill="#FFFFFF" x="532.5" y="337.5" width="91" height="16" rx="2"></rect>
+        <text id="TRANSIT" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="528.186465" y="288">TRANSIT</tspan>
+        </text>
+        <text id="KEY-RING" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="540.966172" y="318">KEY RING</tspan>
+        </text>
+        <text id="KEY:-RSA-2048-v1" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="538.757539" y="348">KEY: RSA 2048 v1</tspan>
+        </text>
+        <path d="M668.378906,113 L669.819702,113 C672.581126,113 674.819702,115.238576 674.819702,118 L674.819702,131.940796 C674.819702,133.90649 676.413212,135.5 678.378906,135.5 L678.378906,135.5 L678.378906,135.5 C676.413212,135.5 674.819702,137.09351 674.819702,139.059204 L674.819702,153 C674.819702,155.761424 672.581126,158 669.819702,158 L668.378906,158 L668.378906,158" id="Path-2" stroke="#979797" stroke-linecap="round"></path>
+        <text id="Policy-Management:-C" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="683" y="201">Policy Management: </tspan>
+            <tspan x="774.230996" y="201" font-family="Helvetica" font-weight="normal">Create  </tspan>
+            <tspan x="683" y="212" font-family="Helvetica" font-weight="normal">group access policies to reflect </tspan>
+            <tspan x="683" y="223" font-family="Helvetica" font-weight="normal">corporate authentication </tspan>
+            <tspan x="683" y="234" font-family="Helvetica" font-weight="normal">hierachy.</tspan>
+        </text>
+        <path d="M668.378906,188 L669.819702,188 C672.581126,188 674.819702,190.238576 674.819702,193 L674.819702,206.940796 C674.819702,208.90649 676.413212,210.5 678.378906,210.5 L678.378906,210.5 L678.378906,210.5 C676.413212,210.5 674.819702,212.09351 674.819702,214.059204 L674.819702,228 C674.819702,230.761424 672.581126,233 669.819702,233 L668.378906,233 L668.378906,233" id="Path-2" stroke="#979797" stroke-linecap="round"></path>
+        <text id="Key-Management:-Alig" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+            <tspan x="683" y="310">Key Management: </tspan>
+            <tspan x="763.959043" y="310" font-family="Helvetica" font-weight="normal">Align </tspan>
+            <tspan x="683" y="321" font-family="Helvetica" font-weight="normal">security guidance for rotation, </tspan>
+            <tspan x="683" y="332" font-family="Helvetica" font-weight="normal">retirement, and revokation of </tspan>
+            <tspan x="683" y="343" font-family="Helvetica" font-weight="normal">encryption keys, and maintain </tspan>
+            <tspan x="683" y="354" font-family="Helvetica" font-weight="normal">a working set. </tspan>
+        </text>
+        <path d="M668.378906,308 L669.819702,308 C672.581126,308 674.819702,310.238576 674.819702,313 L674.819702,326.940796 C674.819702,328.90649 676.413212,330.5 678.378906,330.5 L678.378906,330.5 L678.378906,330.5 C676.413212,330.5 674.819702,332.09351 674.819702,334.059204 L674.819702,348 C674.819702,350.761424 672.581126,353 669.819702,353 L668.378906,353 L668.378906,353" id="Path-2" stroke="#979797" stroke-linecap="round"></path>
+        <line x1="519.5" y1="218.5" x2="546.5" y2="218.5" id="Line-4" stroke="#DBDBDC" stroke-linecap="square"></line>
+        <path id="Line-3" d="M429,72 L429,158 L433,158 L428.5,167 L424,158 L428,158 L428,72 L429,72 Z" fill="#DBDBDC" fill-rule="nonzero"></path>
+        <line x1="547.862354" y1="128.5" x2="547.862354" y2="141.5" id="Line-3" stroke="#BFBFC0" stroke-linecap="square"></line>
+        <line x1="456.5" y1="90.5" x2="428.5" y2="90.5" id="Line-3" stroke="#BFBFC0" stroke-linecap="square"></line>
+        <line x1="456.5" y1="217.5" x2="428.5" y2="217.5" id="Line-3" stroke="#DBDBDC" stroke-linecap="square"></line>
+        <path id="Line-3" d="M429,194 L429,233 L433,233 L428.5,242 L424,233 L428,233 L428,194 L429,194 Z" fill="#DBDBDC" fill-rule="nonzero"></path>
+        <rect id="Rectangle" stroke="#A6DAF0" stroke-width="4" x="10" y="55.4" width="221" height="281" rx="5"></rect>
+        <g id="Group-3" transform="translate(38.000000, 37.000000)">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="53" height="38"></rect>
+            <g id="microsoft-windows-22-logo-svgrepo-com" transform="translate(11.000000, 1.000000)" fill="#00ADEF" fill-rule="nonzero">
+                <path d="M0,4.53062607 L13.037217,2.75523675 L13.0428247,15.3306307 L0.0118384211,15.4047766 L0,4.53075069 L0,4.53062607 Z M13.0309863,16.7794043 L13.0409555,29.3657644 L0.0100938117,27.5741751 L0.00934612194,16.6950399 L13.0308617,16.7794043 L13.0309863,16.7794043 Z M14.6113532,2.52282985 L31.8974419,0 L31.8974419,15.1706251 L14.6113532,15.3077016 L14.6113532,2.52295446 L14.6113532,2.52282985 Z M31.9014296,16.8977885 L31.8973173,32 L14.6112286,29.5602883 L14.5870533,16.8695009 L31.9014296,16.8977885 Z" id="Shape"></path>
+            </g>
+        </g>
+        <text id="Windows-DLL" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="134.536" y="180">Windows DLL</tspan>
+        </text>
+        <path id="Line-3" d="M112.862354,179 L117.362354,188 L113.362,187.999 L113.362,215.999 L117.362354,216 L112.862354,225 L108.362354,216 L112.362,216 L112.362,188 L108.362354,188 L112.862354,179 Z" fill="#979797" fill-rule="nonzero"></path>
+        <rect id="Rectangle" stroke="#1E90FF" fill-opacity="0.5" fill="#87CEEB" x="38.5" y="232.5" width="149" height="74" rx="5"></rect>
+        <rect id="Rectangle" stroke="#1E90FF" fill-opacity="0.5" fill="#87CEEB" x="38.5" y="97.5" width="149" height="74" rx="5"></rect>
+        <g id="Group" transform="translate(91.000000, 245.000000)">
+            <text id="Database" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+                <tspan x="2.12950195" y="43">Database</tspan>
+            </text>
+            <g id="10130-icon-service-SQL-Database" transform="translate(10.600000, 0.000000)" fill-rule="nonzero">
+                <path d="M11.3117647,8.18823529 C5.06470588,8.18823529 0,6.42352941 0,4.09411765 L0,25.9058824 C0,28.1470588 4.97647059,29.9647059 11.1529412,30 L11.3117647,30 C17.5588235,30 22.6235294,28.2352941 22.6235294,25.9058824 L22.6235294,4.09411765 C22.6235294,6.37058824 17.5588235,8.18823529 11.3117647,8.18823529 Z" id="Path" fill="url(#linearGradient-1)"></path>
+                <path d="M22.6235294,4.09411765 C22.6235294,6.37058824 17.5588235,8.18823529 11.3117647,8.18823529 C5.06470588,8.18823529 0,6.42352941 0,4.09411765 C0,1.76470588 5.06470588,0 11.3117647,0 C17.5588235,0 22.6235294,1.76470588 22.6235294,4.09411765" id="Path" fill="#E8E8E8"></path>
+                <path d="M19.9941176,3.75882353 C19.9941176,5.20588235 16.0941176,6.37058824 11.3117647,6.37058824 C6.52941176,6.37058824 2.62941176,5.20588235 2.62941176,3.75882353 C2.62941176,2.31176471 6.52941176,1.16470588 11.3117647,1.16470588 C16.0941176,1.16470588 19.9941176,2.32941176 19.9941176,3.75882353" id="Path" fill="#50E6FF"></path>
+                <path d="M11.3117647,4.41176471 C8.98285935,4.35228338 6.6609937,4.69250534 4.44705882,5.41764706 C6.66309701,6.12932136 8.9856691,6.45173497 11.3117647,6.37058824 C13.6425714,6.43886605 15.9669597,6.09229916 18.1764706,5.34705882 C15.9562273,4.65545342 13.6361041,4.3393441 11.3117647,4.41176471 Z" id="Path" fill="#198AB3"></path>
+                <path d="M18.1941176,19.2352941 L18.1941176,13.2352941 L16.6058824,13.2352941 L16.6058824,20.5235294 L20.9470588,20.5235294 L20.9470588,19.2352941 L18.1941176,19.2352941 Z M5.59411765,16.2882353 C5.26620284,16.1563607 4.96216029,15.9715505 4.69411765,15.7411765 C4.55032288,15.5891644 4.47396756,15.3855502 4.48235294,15.1764706 C4.47134758,14.9657289 4.57186224,14.7646996 4.74705882,14.6470588 C4.96410611,14.4968815 5.22461088,14.4224515 5.48823529,14.4352941 C6.11675834,14.4070505 6.73704506,14.5869337 7.25294118,14.9470588 L7.25294118,13.4294118 C6.68913553,13.2196356 6.08934742,13.1236695 5.48823529,13.1470588 C4.79588828,13.1101977 4.11331425,13.3231107 3.56470588,13.7470588 C3.079616,14.1210672 2.80384824,14.7054322 2.82352941,15.3176471 C2.82352941,16.2176471 3.38823529,16.9235294 4.58823529,17.4529412 C4.97797848,17.6183077 5.34553155,17.8317256 5.68235294,18.0882353 C5.84934429,18.2283804 5.94616754,18.4349367 5.94705882,18.6529412 C5.94715108,18.8702745 5.8419119,19.0741754 5.66470588,19.2 C5.42454218,19.3406345 5.14854717,19.4081 4.87058824,19.3941176 C4.16079075,19.3882621 3.47726288,19.1248844 2.94705882,18.6529412 L2.94705882,20.2941176 C3.52983157,20.5946217 4.18000288,20.7404546 4.83529412,20.7176471 C5.57496798,20.7615157 6.30803771,20.5565047 6.91764706,20.1352941 C7.35421526,19.7218325 7.57006915,19.126599 7.5,18.5294118 C7.50848166,18.0776279 7.3515842,17.638315 7.05882353,17.2941176 C6.64651159,16.8598398 6.14747652,16.517129 5.59411765,16.2882353 L5.59411765,16.2882353 Z M14.8411765,19.0941176 C15.2418171,18.4229918 15.4437587,17.6519419 15.4235294,16.8705882 C15.3836584,16.2091179 15.1838195,15.5672111 14.8411765,15 C14.5656762,14.4489196 14.1366763,13.9892769 13.6058824,13.6764706 C13.0679897,13.3715984 12.4594461,13.2133771 11.8411765,13.2176471 C11.174684,13.2029941 10.5164802,13.3675451 9.93529412,13.6941176 C9.3905036,13.9981381 8.94363937,14.4511238 8.64705882,15 C8.33465411,15.6239663 8.17726734,16.3140467 8.18823529,17.0117647 C8.19192135,17.6247312 8.33684964,18.2285991 8.61176471,18.7764706 C8.8810813,19.3215625 9.30446136,19.7756223 9.82941176,20.0823529 C10.3624273,20.4074309 10.970181,20.589757 11.5941176,20.6117647 L13.1117647,22.3764706 L15.2470588,22.3764706 L13.0764706,20.4352941 C13.8073933,20.2160649 14.4342481,19.7396553 14.8411765,19.0941176 Z M13.0764706,18.6529412 C12.7507411,19.0574121 12.2543885,19.2859955 11.7352941,19.2705882 C11.2119454,19.2874926 10.7125709,19.0509468 10.3941176,18.6352941 C10.0210955,18.125651 9.83986798,17.5007284 9.88235294,16.8705882 C9.84138605,16.2406128 10.0224662,15.6161985 10.3941176,15.1058824 C10.7305236,14.6911915 11.2366087,14.4511255 11.7705882,14.4529412 C12.2943028,14.4303675 12.7933391,14.6765588 13.0941176,15.1058824 C13.4417842,15.6261235 13.6091673,16.2460608 13.5705882,16.8705882 C13.6321598,17.5053848 13.4561,18.1404578 13.0764706,18.6529412 L13.0764706,18.6529412 Z" id="Shape" fill="url(#radialGradient-2)"></path>
+            </g>
+        </g>
+        <g id="Group-2" transform="translate(83.000000, 110.000000)">
+            <text id="Vault-EKM-Provider" font-family="Helvetica-Bold, Helvetica" font-size="9" font-weight="bold" letter-spacing="0.09" fill="#222222">
+                <tspan x="7.58938477" y="43">Vault EKM </tspan>
+                <tspan x="11.3829199" y="54">Provider</tspan>
+            </text>
+            <g id="Logo-Group_13" transform="translate(15.600000, 0.000000)" fill="#000001" fill-rule="nonzero">
+                <path d="M0,0 L15.4125809,30 L30.9365332,0 L0,0 Z M13.0157026,11.9091591 L10.5601856,11.9091591 L10.5601856,9.45392331 L13.0157026,9.45392331 L13.0157026,11.9091591 Z M13.0157026,8.22489922 L10.5601856,8.22489922 L10.5601856,5.77247586 L13.0157026,5.77247586 L13.0157026,8.22489922 Z M16.6974313,15.5906065 L14.2419143,15.5906065 L14.2419143,13.1353708 L16.6974313,13.1353708 L16.6974313,15.5906065 Z M16.6974313,11.9091591 L14.2419143,11.9091591 L14.2419143,9.45392331 L16.6974313,9.45392331 L16.6974313,11.9091591 Z M16.6974313,8.22489922 L14.2419143,8.22489922 L14.2419143,5.77247586 L16.6974313,5.77247586 L16.6974313,8.22489922 Z M20.3596138,11.9091591 L17.9042374,11.9091591 L17.9042374,9.45392331 L20.3596138,9.45392331 L20.3596138,11.9091591 Z M17.9042374,8.22489922 L17.9042374,5.77247586 L20.3596138,5.77247586 L20.3596138,8.22489922 L17.9042374,8.22489922 Z" id="Vector_48"></path>
+            </g>
+        </g>
+        <text id="Request-Data-Encrypt" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="36.092" y="195">Request Data </tspan>
+            <tspan x="32.976" y="205">Encryption Key</tspan>
+        </text>
+        <text id="Authenticate-with-RO" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="256.192" y="91">Authenticate with ROLE ID </tspan>
+            <tspan x="271.024" y="101">and ROLE SECRET</tspan>
+        </text>
+        <text id="Request-Data-Encrypt" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="8" font-weight="bold" letter-spacing="0.08" fill="#222222">
+            <tspan x="289.092" y="218">Request Data </tspan>
+            <tspan x="285.976" y="228">Encryption Key</tspan>
+        </text>
+        <path id="Line-3" d="M371,116 L380,120.5 L371,125 L370.999,121 L194.137646,121 L194.137646,120 L370.999,120 L371,116 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Line-3" d="M238.5,120 C244.203924,120 248.845573,124.548142 248.996226,130.215705 L249,130.5 L249,244.5 C249,246.914273 250.901237,248.884489 253.288164,248.995102 L253.5,249 L371,249 L371,245 L380,249.5 L371,254 L371,250 L253.5,250 C250.536521,250 248.120461,247.65622 248.004367,244.721207 L248,244.5 L248,130.5 C248,125.343755 243.892106,121.146961 238.770479,121.003776 L238.5,121 L236.507812,121 L236.507812,120 L238.5,120 Z" fill="#979797" fill-rule="nonzero"></path>
+    </g>
+</svg>

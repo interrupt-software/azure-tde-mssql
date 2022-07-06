@@ -170,6 +170,6 @@ window.onload = function () {
     Promise.all(
         document.getElementById(magic_cell_id.toString()).getAnimations({ subtree: true })
             .map(animation => animation.finished)
-    ).then(() => window.location.replace("/html/01-about-this-track.html"));
+    ).then(() => window.location.replace("/html/about-this-track.html"));
 
 }

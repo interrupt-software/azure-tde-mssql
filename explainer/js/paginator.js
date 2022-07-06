@@ -1,16 +1,17 @@
 const track_pages = [
     [
-        "01-about-this-track",
-        "04-track-contents",
-        "05-working-environment"
+        "about-this-track",
+        "track-contents",
+        "working-environment",
     ],
     [
-        "06-what-is-tde",
-        "03-about-tde"
+        "industry-challenges",
+        "about-tde",
+        "what-is-tde",
+        "how-ekm-works",
     ],
     [
-        "02-why-enable-tde",
-        "03-about-tde"
+        "why-enable-tde",
     ]
 ];
 
