@@ -7,11 +7,14 @@ const track_pages = [
     [
         "industry-challenges",
         "about-tde",
-        "what-is-tde",
         "how-ekm-works",
     ],
     [
+        "why-enable-tde",
         "dek-key-exchange",
+        "configure-tde-mssql",
+    ],
+    [
         "describe-benefits",
     ]
 ];
