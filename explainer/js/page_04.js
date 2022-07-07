@@ -42,7 +42,7 @@ const paths = [
         "class": "cell-span-3-2",
         "splash_delay": 3,
         "label": {
-            "text": "Encrypt an MSSQL Database",
+            "text": "Encrypt MSSQL DB",
             "class": "cell-label-top"
         },
         "boxtype": "cell-decorated",
@@ -56,7 +56,7 @@ const paths = [
         "class": "cell-span-3-2",
         "splash_delay": 3,
         "label": {
-            "text": "Configure DEK Requirements",
+            "text": "Deploy EKM Provider",
             "class": "cell-label-top"
         },
         "boxtype": "cell-decorated",
@@ -70,7 +70,7 @@ const paths = [
         "class": "cell-span-3-2",
         "splash_delay": 3,
         "label": {
-            "text": "Rotate Database DEK",
+            "text": "Rotate DEK and KEK",
             "class": "cell-label-top"
         },
         "boxtype": "cell-decorated",

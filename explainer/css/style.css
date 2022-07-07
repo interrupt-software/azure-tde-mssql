@@ -183,7 +183,7 @@ body {
     display: none;
     position: fixed;
     top: 10px;
-    /* left: 50%; */
+    left: 30%;
     box-shadow: 0 20px 50px var(--gray-4);
     border-radius: 2rem;
     z-index: -100;
@@ -191,9 +191,9 @@ body {
     color: #222;
     border: 0;
     border-radius: 0.25rem;
-    /* animation: fadeInUp 1000ms forwards, fade-in 500ms forwards; */
+    animation: fadeInUp 1000ms forwards, fade-in 500ms forwards;
     padding: 20px;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 @keyframes fadeInUp {
