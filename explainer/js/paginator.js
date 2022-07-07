@@ -3,14 +3,14 @@ const track_pages = [
         "about-this-track",
         "track-contents",
         "working-environment",
-        // ],
-        // [
+    ],
+    [
         "industry-challenges",
         "about-tde",
         "what-is-tde",
         "how-ekm-works",
-        // ],
-        // [
+    ],
+    [
         "dek-key-exchange",
         "describe-benefits",
     ]
