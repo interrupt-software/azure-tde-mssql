@@ -1,6 +1,14 @@
 const paths = [
     {
-        "id": 20,
+        "id": 0,
+        "class": "cell-span-1-6",
+        "label": {
+            "text": "Attack vectors",
+            "class": "cell-label-left"
+        },
+    },
+    {
+        "id": 7,
         "class": "cell-span-3-3",
         "label": {
             "text": "Unauthorized User",
@@ -11,7 +19,7 @@ const paths = [
         "modal": "modal1"
     },
     {
-        "id": 21,
+        "id": 8,
         "class": "cell-span-4-2",
         "label": {
             "text": "Unauthorized Access",
@@ -23,7 +31,7 @@ const paths = [
         "modal": "modal2"
     },
     {
-        "id": 19,
+        "id": 9,
         "class": "cell-span-5-5",
         "label": {
             "text": "MS SQL Servers",
@@ -34,7 +42,7 @@ const paths = [
         "modal": "modal3"
     },
     {
-        "id": 22,
+        "id": 10,
         "class": "cell-span-4-2",
         "label": {
             "text": "Unencrypted Data",

@@ -59,9 +59,15 @@ body {
     opacity: 0;
 
     animation: fadeInUp ease forwards;
-    animation-duration: calc(var(--splash-delay) * 200ms);
+    animation-duration: calc(var(--splash-delay) * 500ms);
     animation-delay: calc(var(--splash-delay) * 200ms);
-    /* background-color: lightblue; */
+    /* background-color: rgba(176, 224, 230, 0.75); */
+}
+
+.cell-span-1-6 {
+    border-radius: 10px;
+    grid-column: span 6;
+    grid-row: span 1;
 }
 
 .cell-span-2-2 {
@@ -122,6 +128,16 @@ body {
     border-radius: 10px;
     grid-column: span 12;
     grid-row: span 6;
+}
+
+.cell-label-left {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: 900;
+    height: calc(var(--cell-height)/2);
+    padding: 10px;
 }
 
 .cell-label-top {

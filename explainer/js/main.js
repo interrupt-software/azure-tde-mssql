@@ -2,8 +2,8 @@ const ar_width = 16;
 const ar_height = 9;
 
 function getDivSize(classdef) {
-    var w = parseInt(classdef.slice(10, 11));
-    var h = parseInt(classdef.slice(12));
+    var w = parseInt(classdef.split("-")[2]);
+    var h = parseInt(classdef.split("-")[3]);
     return w * h;
 }
 
