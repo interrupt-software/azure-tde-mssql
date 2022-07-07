@@ -15,7 +15,7 @@ const track_pages = [
         "configure-tde-mssql",
     ],
     [
-        "describe-benefits",
+        "summarize-benefits",
     ]
 ];
 
@@ -61,9 +61,9 @@ for (let i = 0; i < challenge_pages.length; i++) {
     if (isCurrentPage(challenge_pages[i])) {
         if (i == 0 && (i + 1) < challenge_pages.length) {
             setNextPage(challenge_pages[i + 1]);
-        } else if (i == (challenge_pages.length - 1) && i >= 0) {
+        } else if (i == (challenge_pages.length - 1) && challenge_pages.length > 1 && i >= 0) {
             setLastPage(challenge_pages[i - 1]);
-        } else {
+        } else if (challenge_pages.length > 1) {
             setNextPage(challenge_pages[i + 1]);
             setLastPage(challenge_pages[i - 1]);
         }
