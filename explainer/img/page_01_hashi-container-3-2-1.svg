@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="225px" height="150px" viewBox="0 0 225 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>page_01_hashi-container-3-2-1</title>
-    <g id="page_01_hashi-container-3-2-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <line x1="134.5" y1="75.5" x2="225.5" y2="75.5" id="Line" stroke-opacity="0.5" stroke="#979797" stroke-width="3" stroke-linecap="square"></line>
-        <line x1="112.5" y1="53.5" x2="112.5" y2="1.5" id="Line" stroke-opacity="0.5" stroke="#979797" stroke-width="3" stroke-linecap="square"></line>
-        <circle id="Oval" stroke-opacity="0.5" stroke="#979797" stroke-width="3" fill="#FFFFFF" stroke-linecap="square" cx="113" cy="75" r="20"></circle>
-        <text id="1" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" letter-spacing="0.24" fill="#000000">
-            <tspan x="106.208" y="84">1</tspan>
-        </text>
-    </g>
+<svg width="225" height="150" viewBox="0 0 225 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_0_1155)">
+<rect width="225" height="150" fill="white"/>
+<path d="M134.5 75.5H225.5" stroke="#979797" stroke-opacity="0.5" stroke-width="3" stroke-linecap="square"/>
+<path d="M112.5 53.5V1.5" stroke="#979797" stroke-opacity="0.5" stroke-width="3" stroke-linecap="square"/>
+<circle cx="113" cy="75" r="20" fill="white" stroke="#979797" stroke-opacity="0.5" stroke-width="3" stroke-linecap="square"/>
+<path d="M115.508 65.9023V83H112.133V69.793L108.078 71.082V68.4219L115.145 65.9023H115.508Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_0_1155">
+<rect width="225" height="150" fill="white"/>
+</clipPath>
+</defs>
 </svg>
