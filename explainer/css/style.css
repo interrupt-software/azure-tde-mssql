@@ -303,3 +303,30 @@ body {
     padding: 20px;
     vertical-align: top;
 }
+
+#lightbox {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--gray-5); */
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox svg {
+    max-width: 90%;
+    max-height: 80%;
+    background-color: white;
+    transform: scale(2);
+    padding: 20px;
+    box-shadow: 0 20px 50px var(--gray-4);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(2rem);
+}

@@ -39,6 +39,14 @@ window.onload = function () {
 
     const matrix = document.getElementById("matrix");
 
+    const lightbox = document.createElement("div");
+    lightbox.id = "lightbox";
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener('click', e => {
+        lightbox.classList.remove('active');
+    })
+
     for (let i = 0; i < grid_rows; i++) {
         for (let j = 0; j < grid_columns && (i * grid_columns + j <= matrix_true_size); j++) {
             var newDiv = document.createElement("div");
@@ -94,8 +102,27 @@ window.onload = function () {
                 }
             } else if (path.image) {
                 const imageDiv = document.createElement("div");
+                imageDiv.id = "svg_" + path.id;
                 fetchSVG("/img/" + path.image).then(imageSVG => {
                     imageDiv.appendChild(imageSVG.documentElement);
+
+
+                    imageDiv.addEventListener('click', e => {
+                        lightbox.classList.add('active');
+                        const lightboxSVG = document.createElement("div");
+                        lightboxSVG.id = "light-box-svg"
+                        console.log(lightbox);
+
+                        if (lightbox.firstElementChild) {
+                            removeSVGDiv = document.getElementById("light-box-svg");
+                            removeSVGDiv.remove()
+                        }
+
+                        lightboxSVG.innerHTML = document.getElementById("svg_" + path.id).innerHTML;
+                        lightbox.appendChild(lightboxSVG);
+                    });
+
+
                     pathDiv.appendChild(imageDiv);
                 });
             }
