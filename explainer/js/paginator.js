@@ -15,6 +15,8 @@ const track_pages = [
         "configure-tde-mssql",
     ],
     [
+        "rotate-dek-kek",
+        "compare-before-after",
         "summarize-benefits",
     ]
 ];
