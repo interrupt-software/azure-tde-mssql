@@ -1,3 +1,5 @@
+import jsondata from "/js/paths.json" assert { type: "json" };
+
 const ar_width = 16;
 const ar_height = 9;
 
@@ -17,6 +19,9 @@ async function fetchSVG(svg_name) {
 }
 
 window.onload = function () {
+
+    const current_page = (location.href.split("/").slice(-1)[0]).split(".")[0];
+    const paths = jsondata[current_page];
 
     var styles = getComputedStyle(document.documentElement);
     var grid_columns = styles.getPropertyValue("--grid-columns");
@@ -155,7 +160,4 @@ window.onload = function () {
 
         })
     }
-
-
-
 };
