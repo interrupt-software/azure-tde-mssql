@@ -3,18 +3,18 @@ const track_pages = [
         "about-this-track",
         "track-contents",
         "working-environment",
-        // ],
-        // [
+    ],
+    [
         "industry-challenges",
         "about-tde",
         "how-ekm-works",
-        // ],
-        // [
+    ],
+    [
         "why-enable-tde",
         "dek-key-exchange",
         "configure-tde-mssql",
-        // ],
-        // [
+    ],
+    [
         "rotate-dek-kek",
         "compare-before-after",
         "summarize-benefits",
